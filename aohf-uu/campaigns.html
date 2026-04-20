@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Campaigns - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="View all active campaigns by Asuwaju Odusote Humanitarian Foundation. Join our ongoing initiatives and help us reach our goals to transform more lives.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="pictures/logo.jpg" alt="AOHF Logo">
+            </div>
+            <div class="loading-text">
+                <h2>Loading Campaigns...</h2>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports.html">Reports & Transparency</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="campaigns.html" class="nav-link active">Campaigns</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1>Active Campaigns</h1>
+                <p>Join our ongoing initiatives and help us reach our goals to transform more lives across Africa</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Campaigns</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Stats -->
+    <section class="campaign-stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Active Campaigns</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">$485K</div>
+                        <div class="stat-label">Total Raised</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">2,847</div>
+                        <div class="stat-label">Donors</div>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Filters -->
+    <section class="campaign-filters">
+        <div class="container">
+            <div class="filter-controls" data-aos="fade-up">
+                <h3>Filter Campaigns</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Campaigns</button>
+                    <button class="filter-btn" data-filter="urgent">Urgent</button>
+                    <button class="filter-btn" data-filter="education">Education</button>
+                    <button class="filter-btn" data-filter="water">Clean Water</button>
+                    <button class="filter-btn" data-filter="emergency">Emergency</button>
+                    <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Campaigns Grid -->
+    <section class="all-campaigns-section">
+        <div class="container">
+            <div class="campaigns-grid">
+                <!-- Campaign 1 - Featured -->
+                <div class="campaign-card featured" data-category="urgent water" data-aos="fade-up" data-aos-delay="100">
+                    <div class="campaign-image">
+                        <div class="campaign-overlay"></div>
+                        <div class="campaign-badge urgent">
+                            <span>Urgent</span>
+                        </div>
+                        <div class="campaign-category">
+                            <i class="fas fa-tint"></i>
+                            <span>Clean Water</span>
+                        </div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">Clean Water for 5 Villages in Kenya</h3>
+                        <p class="campaign-description">Help us build 5 new water wells to provide clean, safe drinking water to over 2,500 people in rural Kenya communities.</p>
+                        
+                        <div class="campaign-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">$45,750</span>
+                                <span class="stat-label">Raised</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">$75,000</span>
+                                <span class="stat-label">Goal</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">23</span>
+                                <span class="stat-label">Days Left</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress-bar-campaign">
+                                <div class="progress-fill" data-progress="61"></div>
+                            </div>
+                            <div class="progress-percentage">61% Complete</div>
+                        </div>
+
+                        <div class="campaign-actions">
+                            <a href="donate.html?campaign=water-kenya" class="btn-campaign-primary">
+                                <span>Donate Now</span>
+                                <i class="fas fa-heart"></i>
+                            </a>
+                            <a href="clean-water.html" class="btn-campaign-secondary">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 2 -->
+                <div class="campaign-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
+                    <div class="campaign-image">
+                        <div class="campaign-overlay"></div>
+                        <div class="campaign-badge success">
+                            <span>80% Funded</span>
+                        </div>
+                        <div class="campaign-category">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">School Supplies for 500 Children</h3>
+                        <p class="campaign-description">Provide essential school supplies, uniforms, and learning materials for orphaned children across 3 education centers in Nigeria.</p>
+                        
+                        <div class="campaign-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">$32,400</span>
+                                <span class="stat-label">Raised</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">$40,000</span>
+                                <span class="stat-label">Goal</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">45</span>
+                                <span class="stat-label">Days Left</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress-bar-campaign">
+                                <div class="progress-fill" data-progress="81"></div>
+                            </div>
+                            <div class="progress-percentage">81% Complete</div>
+                        </div>
+
+                        <div class="campaign-actions">
+                            <a href="donate.html?campaign=education-nigeria" class="btn-campaign-primary">
+                                <span>Donate Now</span>
+                                <i class="fas fa-heart"></i>
+                            </a>
+                            <a href="education.html" class="btn-campaign-secondary">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign 3 -->
+                <div class="campaign-card" data-category="emergency urgent" data-aos="fade-up" data-aos-delay="300">
+                    <div class="campaign-image">
+                        <div class="campaign-overlay"></div>
+                        <div class="campaign-badge emergency">
+                            <span>Emergency</span>
+                        </div>
+                        <div class="campaign-category">
+                            <i class="fas fa-heart"></i>
+                            <span>Emergency Relief</span>
+                        </div>
+                    </div>
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">Flood Relief for Displaced Families</h3>
+                        <p class="campaign-description">Provide immediate emergency relief including food, shelter, and medical supplies to 1,000 families affected by recent flooding in Ghana.</p>
+                        
+                        <div class="campaign-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">$18,950</span>
+                                <span class="stat-label">Raised</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">$60,000</span>
+                                <span class="stat-label">Goal</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Days Left</span>
+                            </div>
+                        </div>
+
+                        <div class="progress-container">
+                            <div class="progress-bar-campaign">
+                                <div class="progress-fill" data-progress="32"></div>
+                            </div>
+                            <div class="progress-percentage">32% Complete</div>
+                        </div>
+
+                        <div class="campaign-actions">
+                            <a href="donate.html?campaign=flood-relief-ghana" class="btn-campaign-primary">
+                                <span>Donate Now</span>
+                                <i class="fas fa-heart"></i>
+                            </a>
+                            <a href="emergency-relief.html" class="btn-campaign-secondary">
+                                <span>Learn More</span>
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional campaigns would go here -->
+                <!-- Campaign 4-12 can be added following the same pattern -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section" data-aos="fade-up">
+                <button class="btn-load-more" id="load-more-campaigns">
+                    <span>Load More Campaigns</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="campaigns-cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Start Your Own Campaign</h2>
+                <p>Have an idea for a humanitarian project? Partner with us to create lasting change in African communities.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn-primary-3d">
+                        <span>Propose a Campaign</span>
+                        <i class="fas fa-lightbulb"></i>
+                    </a>
+                    <a href="volunteer.html" class="btn-secondary-3d">
+                        <span>Become a Partner</span>
+                        <i class="fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo">
+                            <h3>Asuwaju Odusote Humanitarian Foundation</h3>
+                        </div>
+                        <p>Transforming lives through compassion and sustainable support across African communities.</p>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> No 5 olumide igbagba close egbe town Atiba ijebu Ogun state Nigeria</p>
+                            <p><i class="fas fa-envelope"></i> asuwaju.aohf@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +234 816 693 1129</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="who-we-are.html">Who We Are</a></li>
+                            <li><a href="our-journey.html">Our Journey</a></li>
+                            <li><a href="mission-vision.html">Mission & Vision</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Our Programs</h4>
+                        <ul>
+                            <li><a href="education.html">Education Programs</a></li>
+                            <li><a href="healthcare.html">Healthcare Initiatives</a></li>
+                            <li><a href="clean-water.html">Clean Water Projects</a></li>
+                            <li><a href="food-distribution.html">Food Distribution</a></li>
+                            <li><a href="emergency-relief.html">Emergency Relief</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="donate.html">Make a Donation</a></li>
+                            <li><a href="volunteer.html">Become a Volunteer</a></li>
+                            <li><a href="support.html">Support Our Work</a></li>
+                            <li><a href="campaigns.html">View Campaigns</a></li>
+                        </ul>
+                                            <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+    
+    <script>
+        // Campaign filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const campaignCards = document.querySelectorAll('.campaign-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    campaignCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            const categories = card.getAttribute('data-category');
+                            if (categories && categories.includes(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

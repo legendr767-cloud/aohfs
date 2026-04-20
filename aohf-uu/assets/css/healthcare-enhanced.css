@@ -1,0 +1,979 @@
+/* Enhanced Healthcare Initiatives Page - Beautiful Medical Effects */
+
+/* Page Header Enhancements - FORCE Background Image and Fix All Issues */
+section.page-header-3d.healthcare-header {
+    background-color: #007bff !important;
+    background-image: url('../pictures/mobile medical for rural areas.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 120px !important;
+    z-index: 1 !important;
+}
+
+/* Alternative paths for background image */
+section.page-header-3d.healthcare-header {
+    background-image: 
+        url('pictures/mobile medical for rural areas.jpg'),
+        url('./pictures/mobile medical for rural areas.jpg'),
+        url('../pictures/mobile medical for rural areas.jpg') !important;
+}
+
+.healthcare-header .container {
+    position: relative !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.healthcare-header .page-header-content {
+    text-align: center !important;
+    color: white !important;
+}
+
+.healthcare-header .page-header-content h1 {
+    color: white !important;
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7) !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+.healthcare-header .page-header-content p {
+    color: white !important;
+    font-size: 1.4rem !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7) !important;
+    margin-bottom: 30px !important;
+    line-height: 1.6 !important;
+}
+
+.healthcare-header .hero-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(rgba(0,123,255,0.8), rgba(40,167,69,0.7)) !important;
+    z-index: 0 !important;
+}
+
+.healthcare-header img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: -1 !important;
+}
+
+/* Override gradient text effect to ensure white text */
+.healthcare-header .page-header-content h1 {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: initial !important;
+    color: white !important;
+    animation: none !important;
+    position: relative !important;
+}
+
+@keyframes healthcareGlow {
+    0%, 100% { 
+        filter: brightness(1); 
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    }
+    50% { 
+        filter: brightness(1.2); 
+        text-shadow: 3px 3px 10px rgba(0,0,0,0.7), 0 0 20px rgba(227,242,253,0.5);
+    }
+}
+
+/* Healthcare Overview Section - Fix Z-Index Issues */
+.healthcare-overview-3d {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%) !important;
+    position: relative !important;
+    z-index: 100 !important;
+    margin-top: 0 !important;
+}
+
+.healthcare-overview-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23007bff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.4;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    animation: medicalPulse 2s ease-in-out infinite;
+}
+
+@keyframes medicalPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4); }
+}
+
+.overview-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.overview-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    border-radius: 2px;
+}
+
+.overview-text .lead {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.overview-text p {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.stat-item:hover::before {
+    left: 100%;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.stat-label {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.visual-card-3d {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.visual-card-3d:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 123, 255, 0.15);
+}
+
+.visual-card-3d::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.05), transparent);
+    animation: cardShine 4s ease-in-out infinite;
+}
+
+@keyframes cardShine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-image i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    animation: medicalFloat 3s ease-in-out infinite;
+}
+
+@keyframes medicalFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.placeholder-image p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Healthcare Services Section - Fix Z-Index */
+.healthcare-services-3d {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    position: relative !important;
+    z-index: 99 !important;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card-3d {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.05), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card-3d:hover::before {
+    left: 100%;
+}
+
+.service-card-3d:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15);
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card-3d:hover .card-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0, 123, 255, 0.4);
+    animation: medicalPulse 1s ease-in-out;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.service-card-3d h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.service-card-3d p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-features {
+    text-align: left;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #4a5568;
+    transition: all 0.2s ease;
+}
+
+.feature:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.feature i {
+    color: #28a745;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+/* Health Impact Section - Fix Z-Index */
+.health-impact-3d {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%) !important;
+    position: relative !important;
+    z-index: 98 !important;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.02), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.metric-card:hover::before {
+    opacity: 1;
+}
+
+.metric-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 123, 255, 0.12);
+}
+
+.metric-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-icon {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.metric-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.metric-content {
+    flex-grow: 1;
+}
+
+.metric-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.metric-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.metric-description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Patient Stories Section - Fix Z-Index */
+.patient-stories-3d {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%) !important;
+    position: relative !important;
+    z-index: 97 !important;
+}
+
+.stories-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.story-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.02), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.story-card:hover::before {
+    opacity: 1;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 123, 255, 0.12);
+}
+
+.story-quote {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.story-quote i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.story-quote p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a5568;
+    font-style: italic;
+    margin: 0;
+}
+
+.story-author {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.author-image .placeholder-image {
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-image i {
+    font-size: 1.5rem;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.author-info span {
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Support Healthcare Section - Fix Z-Index */
+.support-healthcare-3d {
+    padding: 80px 0 !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%) !important;
+    position: relative !important;
+    z-index: 96 !important;
+}
+
+.support-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.support-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 25px;
+}
+
+.support-text p {
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.support-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.support-option {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #007bff;
+}
+
+.support-option:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+}
+
+.option-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.option-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.option-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.option-content p {
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.support-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.action-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.action-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 123, 255, 0.02), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.action-card:hover::before {
+    opacity: 1;
+}
+
+.action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.15);
+}
+
+.action-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 15px;
+}
+
+.action-card p {
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-primary-3d, .btn-secondary-3d {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary-3d {
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary-3d:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.4);
+    color: white;
+}
+
+.btn-secondary-3d {
+    background: transparent;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary-3d:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview-content,
+    .support-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .services-grid,
+    .impact-metrics,
+    .stories-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .overview-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .overview-text h2,
+    .support-text h2 {
+        font-size: 2rem;
+    }
+    
+    .page-header-content h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .metric-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Loading Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+.btn-primary-3d:focus,
+.btn-secondary-3d:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Healthcare-specific animations */
+.healthcare-highlight {
+    animation: healthcareHighlight 2s ease-in-out infinite alternate;
+}
+
+@keyframes healthcareHighlight {
+    0% { background-color: #007bff; }
+    100% { background-color: #28a745; }
+}
+
+/* Medical cross animation */
+.medical-cross {
+    animation: medicalCross 3s ease-in-out infinite;
+}
+
+@keyframes medicalCross {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(90deg); }
+}
+
+/* Heartbeat animation */
+.heartbeat {
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+}
+
+/* Healthcare Statistics Tiles - Fix Display Issues */
+.healthcare-stat-tile {
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: rgba(255,255,255,0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 3px solid rgba(255,255,255,0.4) !important;
+    border-radius: 25px !important;
+    min-width: 280px !important;
+    min-height: 200px !important;
+    padding: 50px 60px !important;
+    text-align: center !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.healthcare-stat-tile:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+    background: rgba(255,255,255,0.2) !important;
+}
+
+.healthcare-stat-tile .stat-number {
+    font-size: 4.5rem !important;
+    font-weight: 900 !important;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    margin-bottom: 20px !important;
+    line-height: 1 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.healthcare-stat-tile .stat-label {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
+    line-height: 1.3 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    opacity: 1 !important;
+}
+
+/* Fix all healthcare stats tiles */
+.healthcare-stats > div {
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.healthcare-stats > div > div {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+}

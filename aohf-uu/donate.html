@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="Make a simple and secure donation to support AOHF's humanitarian work across Africa.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Simple Donate Page Styles */
+        .donate-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+        }
+        
+        .donate-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .donate-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .donate-description {
+            font-size: 1.2rem;
+            color: #6c757d;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .donation-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+        }
+        
+        .amount-section {
+            margin-bottom: 30px;
+        }
+        
+        .amount-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .amount-btn {
+            padding: 15px 20px;
+            border: 2px solid #007bff;
+            background: white;
+            color: #007bff;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .amount-btn:hover,
+        .amount-btn.active {
+            background: #007bff;
+            color: white;
+        }
+        
+        .custom-amount {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        
+        .custom-amount:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        
+        .donate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;690
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .donate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+        }
+        
+        .security-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .security-info i {
+            color: #28a745;
+            margin-right: 8px;
+        }
+        
+        /* Bank Details Hover Effects */
+        .bank-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .bank-card:hover {
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .bank-details-list {
+            transition: all 0.3s ease;
+        }
+
+        .bank-card:hover .bank-details-list {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            transform: scale(1.02);
+        }
+
+        /* Fade in animation for the entire section */
+        .bank-details-section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Pulse effect for account numbers */
+        .value {
+            transition: all 0.3s ease;
+        }
+
+        .value:hover {
+            color: #28a745;
+            transform: scale(1.05);
+        }
+
+        /* Shimmer effect for the info section */
+        .security-info {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .security-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            .donate-container {
+                padding: 100px 15px 60px;
+            }
+
+            .donate-title {
+                font-size: 2rem;
+            }
+
+            .donation-form {
+                padding: 30px 20px;
+            }
+
+            .amount-buttons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports-transparency.html">Reports & Transparency</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d active">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Simple Donate Page -->
+    <div class="donate-container">
+        <div class="donate-header">
+            <h1 class="donate-title">Make a Donation</h1>
+            <p class="donate-description">
+                Your generosity transforms lives across Africa. Every donation, no matter the size, 
+                creates lasting impact in communities that need it most.
+            </p>
+        </div>
+
+        <div class="bank-details-section">
+            <h3 style="text-align: center; color: #007bff; margin-bottom: 30px;">
+                <i class="fas fa-university"></i> Bank Transfer Details
+            </h3>
+            
+            <!-- GBP Account -->
+            <div class="bank-card" style="margin-bottom: 30px;">
+                <h4 style="text-align: center; color: #007bff; margin-bottom: 20px; font-size: 1.3em;">GBP Account</h4>
+                <div class="bank-details-list" style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Bank Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">Guarantee Trust Bank</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">ASUWAJU ODUSOTE HUMANITARIAN FOUNDATION</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Number:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500; font-size: 1.2em;">3004034872</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- USD Account -->
+            <div class="bank-card" style="margin-bottom: 30px;">
+                <h4 style="text-align: center; color: #007bff; margin-bottom: 20px; font-size: 1.3em;">USD Account</h4>
+                <div class="bank-details-list" style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Bank Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">Guarantee Trust Bank</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">ASUWAJU ODUSOTE HUMANITARIAN FOUNDATION</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Number:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500; font-size: 1.2em;">3004034858</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NGN Account -->
+            <div class="bank-card" style="margin-bottom: 30px;">
+                <h4 style="text-align: center; color: #007bff; margin-bottom: 20px; font-size: 1.3em;">NGN Account</h4>
+                <div class="bank-details-list" style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Bank Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">Guarantee Trust Bank</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #dee2e6;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Name:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500;">ASUWAJU ODUSOTE HUMANITARIAN FOUNDATION</span>
+                    </div>
+                    <div class="detail-item" style="display: flex; justify-content: space-between; padding: 15px 0;">
+                        <span class="label" style="font-weight: 600; color: #495057;">Account Number:</span>
+                        <span class="value" style="color: #007bff; font-weight: 500; font-size: 1.2em;">3004034463</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 8px;">
+                <p style="margin: 0; color: #1976d2; font-weight: 500;">
+                    <i class="fas fa-info-circle"></i>
+                    Please send us a message after making your transfer so we can acknowledge your donation.
+                </p>
+                <a href="contact.html" style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: 500;">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="footer-logo-img">
+                            <span class="footer-logo-text">AOHF</span>
+                        </div>
+                        <p class="footer-description">
+                            Asuwaju Odusote Humanitarian Foundation works to improve lives and strengthen 
+                            communities through practical, sustainable support across Africa and beyond.
+                        </p>
+                                            <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+    <script>
+        // Simple donation form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountButtons = document.querySelectorAll('.amount-btn');
+            const customAmountInput = document.getElementById('customAmount');
+            const donationForm = document.getElementById('donationForm');
+            let selectedAmount = 0;
+
+            // Handle amount button clicks
+            amountButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    amountButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const amount = this.dataset.amount;
+                    
+                    if (amount === 'custom') {
+                        customAmountInput.style.display = 'block';
+                        customAmountInput.focus();
+                        selectedAmount = 0;
+                    } else {
+                        customAmountInput.style.display = 'none';
+                        selectedAmount = parseInt(amount);
+                    }
+                });
+            });
+
+            // Handle custom amount input
+            customAmountInput.addEventListener('input', function() {
+                selectedAmount = parseInt(this.value) || 0;
+            });
+
+            // Handle form submission
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const finalAmount = customAmountInput.style.display === 'block' ? 
+                    parseInt(customAmountInput.value) || 0 : selectedAmount;
+                
+                if (finalAmount <= 0) {
+                    alert('Please select or enter a valid donation amount.');
+                    return;
+                }
+                
+                const formData = {
+                    amount: finalAmount,
+                    name: document.getElementById('donorName').value,
+                    email: document.getElementById('donorEmail').value,
+                    phone: document.getElementById('donorPhone').value
+                };
+                
+                // Here you would typically send the data to your payment processor
+                alert(`Thank you ${formData.name}! Your donation of ₦${finalAmount.toLocaleString()} will make a real difference. You will be redirected to our secure payment processor.`);
+                
+                // In a real implementation, redirect to payment gateway here
+                console.log('Donation data:', formData);
+            });
+        });
+    </script>
+</body>
+</html>

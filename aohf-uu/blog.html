@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOHF Blog | Latest Updates</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        .blog-header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: #f5f5f5;
+        }
+
+        .blog-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 25px rgba(0,0,0,0.12);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-content h3 {
+            margin: 0 0 10px;
+        }
+
+        .blog-content p {
+            color: #555;
+        }
+
+        .blog-content a.read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #008000;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                   <!-- <a href="sasti-roti-junctions-fruit-cart.html">Sasti Roti Junctions & Fruit Cart</a>  -->
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports-transparency.html">Reports & Transparency</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link active">Blog</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Mobile Donate Button -->
+                        <div class="mobile-donate-section">
+                            <a href="donate.html" class="mobile-donate-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>Donate Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="blog-header">
+        <h1>AOHF Blog</h1>
+        <p>News, updates, impact stories & humanitarian insights</p>
+    </section>
+
+    <div class="blog-container">
+        <div class="blog-grid">
+
+            <!-- BLOG CARD 1 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture1.jpg" alt="Community clean water project">
+                <div class="blog-content">
+                    <h3>A Morning in Ijebu-Ode That Changed Everything</h3>
+                    <p>Discover how a single visit to a school in Ijebu-Ode reminded us why our mission is crucial for the community...</p>
+                    <a href="blog/post1.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 2 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture2.jpg" alt="Ijagun education support">
+                <div class="blog-content">
+                    <h3>Supporting Bright Students in Ijagun</h3>
+                    <p>How our programs are helping children in Ijagun access quality education and learning materials...</p>
+                    <a href="blog/post2.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 3 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture3.jpg" alt="Health outreach initiative">
+                <div class="blog-content">
+                    <h3>Healthcare Outreach: Saving Lives in Rural Communities</h3>
+                    <p>Our health campaigns bring medical care and support to remote areas, transforming lives and communities...</p>
+                    <a href="blog/post3.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 4 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture4.jpg" alt="Emergency relief project">
+                <div class="blog-content">
+                    <h3>Rapid Response: Emergency Relief in Action</h3>
+                    <p>From floods to urgent humanitarian crises, see how our team provides timely and impactful support...</p>
+                    <a href="blog/post4.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 5 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture5.jpg" alt="Empowering widows and families">
+                <div class="blog-content">
+                    <h3>Empowering Widows & Vulnerable Families</h3>
+                    <p>Our initiatives aim to support widows and families in need, helping them regain stability and hope...</p>
+                    <a href="blog/post5.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 6 -->
+            <div class="blog-card">
+                <img src="blog/images/blog-picture6.jpg" alt="Educational scholarship impact">
+                <div class="blog-content">
+                    <h3>From Ilupeju to the Future: Scholarship Impact</h3>
+                    <p>Learn how one scholarship completely changed a girl's future and inspired hope for an entire community...</p>
+                    <a href="blog/post6.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+            <!-- BLOG CARD 7 - FEATURED -->
+            <div class="blog-card" style="border: 3px solid #0b5a3d; position: relative;">
+                <div style="position: absolute; top: 10px; right: 10px; background: #0b5a3d; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; z-index: 10;">
+                    <i class="fas fa-star"></i> FEATURED
+                </div>
+                <img src="blog/images/mosque-pictures/mosque-pictures1.jpeg" alt="Mobalufun Central Mosque">
+                <div class="blog-content">
+                    <h3>Building Hope: Supporting Mobalufun Central Mosque 🕌</h3>
+                    <p>Supporting the completion of Mobalufun Central Mosque in Ijebu Ode - the only central mosque serving the entire district...</p>
+                    <a href="blog/post7.html" class="read-more">Read More →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+     <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" loading="eager">
+                            <h3>Asuwaju Odusote Humanitarian Foundation</h3>
+                        </div>
+                        <p>Transforming lives through compassion and sustainable support across African communities.</p>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i> No 5 olumide igbagba close egbe town Atiba ijebu Ogun state Nigeria</p>
+                            <p><i class="fas fa-envelope"></i> asuwaju.aohf@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +234 816 693 1129</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="who-we-are.html">Who We Are</a></li>
+                            <li><a href="our-journey.html">Our Journey</a></li>
+                            <li><a href="mission-vision.html">Mission & Vision</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Our Programs</h4>
+                        <ul>
+                            <li><a href="education.html">Education Programs</a></li>
+                            <li><a href="healthcare.html">Healthcare Initiatives</a></li>
+                            <li><a href="clean-water.html">Clean Water Projects</a></li>
+                            <li><a href="food-distribution.html">Food Distribution</a></li>
+                            <li><a href="emergency-relief.html">Emergency Relief</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="donate.html">Make a Donation</a></li>
+                            <li><a href="volunteer.html">Volunteer With Us</a></li>
+                            <li><a href="support.html">Support Our Work</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Asuwaju Odusote Humanitarian Foundation. All rights reserved.</p>
+                                        <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+</body>
+</html>

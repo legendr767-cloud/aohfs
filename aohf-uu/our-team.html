@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="Meet the dedicated team behind AOHF's humanitarian work across Africa - passionate professionals committed to transforming lives.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS for team photo cropping -->
+    <style>
+        /* Improve team member photo cropping for better face visibility */
+        .member-image-3d {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        
+        .member-image-3d img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Specific adjustments for problematic photos */
+        .chairman-founder img {
+            object-position: center 15%;
+            transform: scale(1.25);
+        }
+        
+        .humanitarian-lead img {
+            object-position: center 15%;
+            transform: scale(1.2);
+        }
+        
+        .medical-aid img {
+            object-position: center 20%;
+            transform: scale(1.3);
+        }
+        
+        .volunteer-manager img {
+            object-position: center 25%;
+            transform: scale(1.25);
+        }
+        
+        .accountant-general img {
+            object-position: center 20%;
+            transform: scale(1.2);
+        }
+        
+        /* Keep good photos as they are */
+        .chairman-board img,
+        .secretary-board img,
+        .community-manager img {
+            object-position: center center;
+            transform: scale(1.0);
+        }
+        
+        /* Hover effect */
+        .member-image-3d:hover img {
+            transform: scale(1.05);
+        }
+        
+        .chairman-founder:hover img {
+            transform: scale(1.3);
+        }
+        
+        .humanitarian-lead:hover img {
+            transform: scale(1.25);
+        }
+        
+        .medical-aid:hover img {
+            transform: scale(1.35);
+        }
+        
+        .volunteer-manager:hover img {
+            transform: scale(1.3);
+        }
+        
+        .accountant-general:hover img {
+            transform: scale(1.25);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html" class="active">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports-transparency.html">Reports & Transparency</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Leadership Team -->
+    <section class="leadership-team section-padding" style="padding-top: 120px !important; margin-top: 0;">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Leadership Team</h2>
+                <p class="section-description">Meet the dedicated leaders driving our humanitarian mission across Africa</p>
+            </div>
+            
+            <div class="team-grid-3d">
+                <!-- Chairman/Founder -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d chairman-founder">
+                            <img src="Team/Odusote Abdullahi Akorede.jpeg" alt="Chairman/Founder" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Odusote Abdullahi Akorede</h3>
+                            <p class="member-role">Chairman/Founder</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Visionary Leader</span>
+                                <span class="achievement-tag">Humanitarian Pioneer</span>
+                            </div>
+                            <p class="member-bio">
+                                Visionary founder and chairman dedicated to transforming lives across Africa through sustainable humanitarian initiatives and community development programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chairman Board of Trustee -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d chairman-board">
+                            <img src="Team/Odusote Ahmad Abdulganiyu.jpeg" alt="Chairman Board of Trustee" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Odusote Ahmad Abdulganiyu</h3>
+                            <p class="member-role">Chairman Board of Trustee</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Strategic Leadership</span>
+                                <span class="achievement-tag">Governance Expert</span>
+                            </div>
+                            <p class="member-bio">
+                                Strategic leader overseeing organizational governance and ensuring effective implementation of our humanitarian mission across all programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vice Chairman Board of Trustees -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d secretary-board">
+                            <img src="Team/updated team/Yunus sharafudeen Adegoke.jpeg" alt="Vice Chairman Board of Trustees" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Yunus Sharafudeen Adegoke</h3>
+                            <p class="member-role">Vice Chairman Board of Trustees</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Strategic Leadership</span>
+                                <span class="achievement-tag">Governance Expert</span>
+                            </div>
+                            <p class="member-bio">
+                                Strategic vice chairman providing leadership and oversight to ensure effective implementation of our humanitarian mission and organizational goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member/Trustee (General) -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="350">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d secretary-board">
+                            <img src="Team/updated team/Sikirullah Tajudeen.jpeg" alt="Member/Trustee (General)" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Sikirullah Tajudeen</h3>
+                            <p class="member-role">Member/Trustee (General)</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Board Member</span>
+                                <span class="achievement-tag">Strategic Advisor</span>
+                            </div>
+                            <p class="member-bio">
+                                Dedicated trustee member contributing to strategic decision-making and ensuring the foundation's mission is carried out effectively.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Officer -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d secretary-board">
+                            <img src="Team/updated team/Sunmola wasiu olamilekan.jpeg" alt="Program Officer" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Sunmola Wasiu Olamilekan</h3>
+                            <p class="member-role">Program Officer</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Program Management</span>
+                                <span class="achievement-tag">Field Coordination</span>
+                            </div>
+                            <p class="member-bio">
+                                Experienced program officer coordinating and implementing humanitarian programs to ensure maximum impact in communities we serve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media & Communications Officer -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d secretary-board">
+                            <img src="Team/updated team/Olagoke Faruq Olaide.jpeg" alt="Media & Communications Officer" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Olagoke Faruq Olaide</h3>
+                            <p class="member-role">Media & Communications Officer</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Media Strategy</span>
+                                <span class="achievement-tag">Public Relations</span>
+                            </div>
+                            <p class="member-bio">
+                                Leading our media and communications efforts to share our impact stories and engage with supporters and communities worldwide.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Humanitarian Lead -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d humanitarian-lead">
+                            <img src="Team/Asuni jamiu Adewale .jpeg" alt="Humanitarian Lead" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Asuni Jamiu Adewale</h3>
+                            <p class="member-role">Humanitarian Lead</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Program Leadership</span>
+                                <span class="achievement-tag">Field Operations</span>
+                            </div>
+                            <p class="member-bio">
+                                Experienced humanitarian lead coordinating field operations and ensuring effective delivery of aid programs to communities in need across Africa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Aid -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d medical-aid">
+                            <img src="Team/Dr, Abdulganiyu Abdulmumeen Ajibola .jpeg" alt="Medical Aid" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Dr. Abdulganiyu Abdulmumeen Ajibola</h3>
+                            <p class="member-role">Medical Aid</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Medical Professional</span>
+                                <span class="achievement-tag">Healthcare Leadership</span>
+                            </div>
+                            <p class="member-bio">
+                                Medical professional leading healthcare initiatives and ensuring quality medical aid delivery to underserved communities across our operational areas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer Manager -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d volunteer-manager">
+                            <img src="Team/Balogun Muslim.jpeg" alt="Volunteer Manager" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Balogun Muslim</h3>
+                            <p class="member-role">Volunteer Manager</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Team Building</span>
+                                <span class="achievement-tag">Volunteer Coordination</span>
+                            </div>
+                            <p class="member-bio">
+                                Dedicated volunteer manager coordinating and empowering our volunteer network to maximize impact in community development and humanitarian programs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Mobilization Manager -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d community-manager">
+                            <img src="Team/Abdulganiyu Abdulsalam.jpeg" alt="Community Mobilization Manager" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Abdulganiyu Abdulsalam</h3>
+                            <p class="member-role">Community Mobilization Manager</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Community Engagement</span>
+                                <span class="achievement-tag">Social Mobilization</span>
+                            </div>
+                            <p class="member-bio">
+                                Expert in community mobilization, building strong partnerships with local communities to ensure sustainable and impactful humanitarian interventions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accountant General -->
+                <div class="team-member-3d" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="member-card-3d">
+                        <div class="member-image-3d accountant-general">
+                            <img src="Team/Abdulshakur Abdulsalam Adelekan .jpeg" alt="Accountant General" class="img-fluid">
+                            <div class="member-overlay-3d">
+                                <div class="social-links-3d">
+                                    <a href="mailto:asuwaju.aohf@gmail.com" class="social-link-3d"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info-3d">
+                            <h3>Abdulshakur Abdulsalam Adelekan</h3>
+                            <p class="member-role">Accountant General</p>
+                            <div class="member-achievements">
+                                <span class="achievement-tag">Financial Management</span>
+                                <span class="achievement-tag">Transparency & Accountability</span>
+                            </div>
+                            <p class="member-bio">
+                                Financial expert ensuring transparent and accountable management of resources, maintaining the highest standards of financial integrity and reporting.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Mission Statement -->
+    <section class="team-mission-section" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); padding: 80px 0; color: white;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 30px; font-weight: 700;">Our Commitment</h2>
+                    <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 40px;">
+                        Together, our dedicated leadership team works tirelessly to transform lives across Africa through 
+                        sustainable humanitarian initiatives, community development programs, and unwavering commitment to 
+                        transparency and accountability.
+                    </p>
+                    <div class="team-stats" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+                        <div class="stat-item text-center">
+                            <div style="font-size: 3rem; font-weight: 700; color: #3498db;">11</div>
+                            <div style="font-size: 1.1rem; opacity: 0.9;">Leadership Members</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div style="font-size: 3rem; font-weight: 700; color: #e74c3c;">15+</div>
+                            <div style="font-size: 1.1rem; opacity: 0.9;">Years Experience</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div style="font-size: 3rem; font-weight: 700; color: #27ae60;">100%</div>
+                            <div style="font-size: 1.1rem; opacity: 0.9;">Commitment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team Call to Action -->
+    <section class="join-team-cta" style="background: #f8f9fa; padding: 60px 0;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: #2c3e50;">Join Our Mission</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px; color: #7f8c8d;">
+                        Be part of our humanitarian mission and help us transform lives across Africa.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="volunteer.html" class="btn" style="background: #3498db; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                            <i class="fas fa-hands-helping" style="margin-right: 8px;"></i>
+                            Volunteer With Us
+                        </a>
+                        <a href="contact.html" class="btn" style="background: #27ae60; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
+                            <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="footer-logo-img">
+                            <span class="footer-logo-text">AOHF</span>
+                        </div>
+                        <p class="footer-description">
+                            Asuwaju Odusote Humanitarian Foundation works to improve lives and strengthen 
+                            communities through practical, sustainable support across Africa and beyond.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contact Information</h4>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> asuwaju.aohf@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +234 816 693 1129</p>
+                            <p><i class="fas fa-map-marker-alt"></i> No 5 olumide igbagba close egbe town Atiba ijebu Ogun state Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="who-we-are.html">About Us</a></li>
+                            <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="donate.html">Donate</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom-content">
+                            <p>&copy; 2024 Asuwaju Odusote Humanitarian Foundation. All rights reserved.</p>
+                            <div class="footer-bottom-links">
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                                <a href="terms-of-service.html">Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+</body>
+</html>

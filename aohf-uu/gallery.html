@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="View photos and videos from AOHF's humanitarian work across Africa. See our programs in action and the communities we serve.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-container { padding: 120px 0 80px; }
+        .page-header { text-align: center; margin-bottom: 60px; padding: 0 20px; }
+        .page-title { font-size: 2.8rem; font-weight: 700; color: #2c3e50; margin-bottom: 20px; }
+        .page-description { font-size: 1.2rem; color: #6c757d; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+        .filter-tabs { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filter-btn { padding: 10px 20px; border: 2px solid #007bff; background: white; color: #007bff; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; }
+        .filter-btn.active, .filter-btn:hover { background: #007bff; color: white; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: translateY(-5px); }
+        .gallery-image { width: 100%; height: 250px; background: linear-gradient(135deg, #007bff, #0056b3); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .gallery-content { padding: 20px; }
+        .gallery-title { font-weight: 600; color: #2c3e50; margin-bottom: 10px; }
+        .gallery-description { color: #6c757d; font-size: 0.9rem; line-height: 1.5; }
+        .gallery-category { display: inline-block; background: #e3f2fd; color: #1976d2; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
+        @media (max-width: 768px) { .page-title { font-size: 2.2rem; } .gallery-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item"><i class="fas fa-envelope"></i>asuwaju.aohf@gmail.com</a>
+                        <a href="tel:+2348166931129" class="contact-item"><i class="fas fa-phone"></i>+234 816 693 1129</a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer"><i class="fas fa-hands-helping"></i>Become a Volunteer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link active">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports-transparency.html">Reports & Transparency</a>
+                                    <a href="gallery.html" class="active">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d"><i class="fas fa-heart"></i>Donate Now</a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Gallery</h1>
+                <p class="page-description">
+                    See our humanitarian work in action through photos and videos from communities across Africa.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/web-design-tutorial.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Web Design Tutorial</h3>
+                        <p class="gallery-description">ICT and vocational skills empowerment program - web design training session.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/catering-session.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Catering Session</h3>
+                        <p class="gallery-description">Vocational training program - catering skills development session.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/catering-students-instructor.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Catering Students and Instructor</h3>
+                        <p class="gallery-description">Students learning catering skills with their dedicated instructor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/makeup-students-instructor.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Makeup Students and Instructor</h3>
+                        <p class="gallery-description">Beauty and makeup training program with professional instructor.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/certificate-presentation.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Certificate Presentation</h3>
+                        <p class="gallery-description">Graduation ceremony - presenting certificates to successful program participants.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/with-chairman-youth-assembly-tanke.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Community</span>
+                        <h3 class="gallery-title">With Chairman Youth Assembly of Tanke</h3>
+                        <p class="gallery-description">Community partnership meeting with local youth assembly leadership.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/with-alangua-of-tanke.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Community</span>
+                        <h3 class="gallery-title">With Alangua of Tanke</h3>
+                        <p class="gallery-description">Meeting with traditional community leader to discuss development programs.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/makeup-students-instructor-2.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">Advanced Makeup Training</h3>
+                        <p class="gallery-description">Advanced beauty and makeup skills training session in progress.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: url('assets/images/catering-student-instructor.jpeg') center/cover;"></div>
+                    <div class="gallery-content">
+                        <span class="gallery-category">Education</span>
+                        <h3 class="gallery-title">One-on-One Catering Training</h3>
+                        <p class="gallery-description">Personalized catering skills training with dedicated instructor guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="footer-logo-img">
+                            <span class="footer-logo-text">AOHF</span>
+                        </div>
+                        <p class="footer-description">Asuwaju Odusote Humanitarian Foundation works to improve lives and strengthen communities through practical, sustainable support across Africa and beyond.</p>
+                                            <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+</body>
+</html>

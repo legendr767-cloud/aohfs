@@ -1,0 +1,355 @@
+/* MOBILE-FIRST RESPONSIVE CSS - COMPLETE REBUILD */
+
+/* Base Mobile Styles (320px+) */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+        max-width: 100%;
+    }
+    
+    /* Typography */
+    h1 { font-size: 1.8rem !important; line-height: 1.2; }
+    h2 { font-size: 1.5rem !important; line-height: 1.3; }
+    h3 { font-size: 1.3rem !important; line-height: 1.3; }
+    p { font-size: 14px; line-height: 1.5; }
+    
+    /* Hero Section */
+    .hero-carousel-section {
+        min-height: 100vh;
+        padding-top: 70px;
+    }
+    
+    .hero-main-title {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* Mobile Tablets (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 { font-size: 2.2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    
+    .hero-main-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+/* MOBILE NAVIGATION - COMPLETE REBUILD */
+@media screen and (max-width: 768px) {
+    /* Header */
+    .header-3d {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+    }
+    
+    .header-top {
+        display: none; /* Hide on mobile */
+    }
+    
+    .navbar-3d {
+        padding: 10px 0;
+    }
+    
+    .navbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo-3d {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    /* Mobile Menu */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        padding: 80px 0 20px 0;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 25px;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        min-height: 60px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(139, 43, 139, 0.08);
+        color: var(--primary-color);
+    }
+    
+    /* Dropdown Menu */
+    .dropdown-menu-3d {
+        position: static;
+        background: rgba(139, 43, 139, 0.03);
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+    
+    .nav-item.dropdown.active .dropdown-menu-3d {
+        display: block;
+    }
+    
+    .dropdown-menu-3d a {
+        display: block;
+        padding: 15px 50px;
+        color: #555;
+        font-size: 14px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-menu-3d a:hover {
+        background: rgba(139, 43, 139, 0.05);
+        color: var(--primary-color);
+    }
+    
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 10000;
+        position: relative;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Hide desktop elements */
+    .nav-actions .btn-donate-3d {
+        display: none;
+    }
+    
+    /* Mobile Donate Button */
+    .mobile-donate-section {
+        display: block;
+        padding: 25px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        margin-top: 20px;
+    }
+    
+    .mobile-donate-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 25px;
+        background: linear-gradient(135deg, #8B2B8B 0%, #FF6B35 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 20px rgba(139, 43, 139, 0.3);
+        width: 100%;
+    }
+    
+    .mobile-donate-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(139, 43, 139, 0.4);
+    }
+    
+    /* Overlay */
+    .nav-menu::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+    
+    .nav-menu.active::before {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* GRID SYSTEMS - MOBILE OPTIMIZED */
+@media screen and (max-width: 768px) {
+    .stats-grid-3d,
+    .food-stats-3d,
+    .water-stats-3d,
+    .education-stats-3d,
+    .security-metrics-3d {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .stats-grid-team-3d {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+    
+    .water-stories-grid-3d {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* LOADING SCREEN - MOBILE OPTIMIZED */
+@media screen and (max-width: 768px) {
+    #loading-screen {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .loader-container p {
+        font-size: 14px;
+        padding: 0 15px;
+        text-align: center;
+        line-height: 1.4;
+    }
+    
+    .cube {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .face {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* PERFORMANCE OPTIMIZATIONS */
+@media screen and (max-width: 768px) {
+    /* Reduce animations on mobile for better performance */
+    * {
+        animation-duration: 0.3s !important;
+    }
+    
+    /* Optimize transforms */
+    .hero-section,
+    .parallax-element {
+        transform: none !important;
+    }
+    
+    /* Simplify shadows */
+    .card-3d,
+    .program-card-3d {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+}

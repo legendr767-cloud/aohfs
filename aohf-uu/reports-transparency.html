@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Past Works - AOHF</title>
+    <meta name="description" content="Explore our completed projects and past humanitarian works across Africa. See the real impact we've made in communities.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reports & Transparency - Minimal Effects Styles */
+        .page-container {
+            padding: 120px 0 80px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .page-description {
+            font-size: 1.2rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .reports-section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .report-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .report-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .report-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .report-description {
+            color: #6c757d;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .report-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #0056b3;
+            color: white;
+        }
+        
+        .financial-overview {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .financial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .financial-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        
+        .financial-label {
+            color: #6c757d;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .financial-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .transparency-principles {
+            margin-top: 80px;
+        }
+        
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .principle-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e9ecef;
+        }
+        
+        .principle-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+        }
+        
+        .principle-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .principle-description {
+            color: #6c757d;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .reports-grid,
+            .financial-grid,
+            .principles-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .report-card,
+            .financial-card,
+            .principle-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link active">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="past-works.html" class="active">Our Past Works</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-container">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Our Past Works</h1>
+                <p class="page-description">
+                    Explore the incredible projects we've completed and the lasting impact we've made in communities across Africa.
+                </p>
+            </div>
+
+            <!-- Past Works Section -->
+            <section class="reports-section">
+                <h2 class="section-title">Our Completed Projects</h2>
+                <div class="reports-grid">
+                    <!-- Project 1 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="report-title">Clean Water Initiative</h3>
+                        <p class="report-description">
+                            We've provided clean drinking water to over 10,000 people in rural communities.
+                        </p>
+                    </div>
+
+                    <!-- Report 2 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="report-title">2022 Impact Assessment</h3>
+                        <p class="report-description">
+                            Detailed analysis of our program outcomes and beneficiary impact across all initiatives.
+                        </p>
+                        <div class="report-meta">
+                            <span>Published: February 2023</span>
+                            <span>PDF • 1.8 MB</span>
+                        </div>
+                    </div>
+
+                    <!-- Report 3 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="report-title">Financial Statements 2023</h3>
+                        <p class="report-description">
+                            Audited financial statements showing income, expenses, and fund allocation details.
+                        </p>
+                        <div class="report-meta">
+                            <span>Published: April 2024</span>
+                            <span>PDF • 1.2 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Program Reports Section -->
+            <section class="reports-section">
+                <h2 class="section-title">Program Reports</h2>
+                <div class="reports-grid">
+                    <!-- Program Report 1 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3 class="report-title">Clean Water Initiative Report</h3>
+                        <p class="report-description">
+                            Progress report on water projects, communities served, and health impact measurements.
+                        </p>
+                        <div class="report-meta">
+                            <span>Published: January 2024</span>
+                            <span>PDF • 1.5 MB</span>
+                        </div>
+                    </div>
+
+                    <!-- Program Report 2 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="report-title">Education Program Outcomes</h3>
+                        <p class="report-description">
+                            Student enrollment, graduation rates, and long-term educational impact analysis.
+                        </p>
+                        <div class="report-meta">
+                            <span>Published: December 2023</span>
+                            <span>PDF • 2.1 MB</span>
+                        </div>
+                    </div>
+
+                    <!-- Program Report 3 -->
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3 class="report-title">Healthcare Impact Study</h3>
+                        <p class="report-description">
+                            Mobile clinic statistics, patient outcomes, and community health improvements.
+                        </p>
+                        <div class="report-meta">
+                            <span>Published: November 2023</span>
+                            <span>PDF • 1.7 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Financial Overview Section -->
+        <section class="financial-overview">
+            <div class="container">
+                <h2 class="section-title">2023 Financial Overview</h2>
+                <div class="financial-grid">
+                    <div class="financial-card">
+                        <div class="financial-amount">₦85.2M</div>
+                        <div class="financial-label">Total Revenue</div>
+                        <div class="financial-description">
+                            From donations, grants, and fundraising activities
+                        </div>
+                    </div>
+                    
+                    <div class="financial-card">
+                        <div class="financial-amount">₦78.9M</div>
+                        <div class="financial-label">Program Expenses</div>
+                        <div class="financial-description">
+                            92.6% directly supporting humanitarian programs
+                        </div>
+                    </div>
+                    
+                    <div class="financial-card">
+                        <div class="financial-amount">₦4.8M</div>
+                        <div class="financial-label">Administrative Costs</div>
+                        <div class="financial-description">
+                            5.6% for operations and management
+                        </div>
+                    </div>
+                    
+                    <div class="financial-card">
+                        <div class="financial-amount">₦1.5M</div>
+                        <div class="financial-label">Fundraising Costs</div>
+                        <div class="financial-description">
+                            1.8% for donor engagement and outreach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Transparency Principles -->
+            <section class="transparency-principles">
+                <h2 class="section-title">Our Transparency Principles</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="principle-title">Open Reporting</h3>
+                        <p class="principle-description">
+                            We publish detailed reports on all our activities, finances, and outcomes regularly.
+                        </p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="principle-title">Independent Audits</h3>
+                        <p class="principle-description">
+                            Our finances are audited annually by certified independent accounting firms.
+                        </p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="principle-title">Stakeholder Engagement</h3>
+                        <p class="principle-description">
+                            We actively engage with donors, beneficiaries, and communities in our decision-making.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="footer-logo-img">
+                            <span class="footer-logo-text">AOHF</span>
+                        </div>
+                        <p class="footer-description">
+                            Asuwaju Odusote Humanitarian Foundation works to improve lives and strengthen 
+                            communities through practical, sustainable support across Africa and beyond.
+                        </p>
+                                            <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+</body>
+</html>

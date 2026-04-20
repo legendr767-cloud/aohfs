@@ -1,0 +1,13 @@
+{
+  "name": "aohf-website",
+  "version": "1.0.0",
+  "description": "Asuwaju Odusote Humanitarian Foundation Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["humanitarian", "foundation", "aohf", "charity"],
+  "author": "Asuwaju Odusote Humanitarian Foundation",
+  "license": "MIT"
+}

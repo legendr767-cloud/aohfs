@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="Discover the mission and vision of Asuwaju Odusote Humanitarian Foundation - our commitment to transforming lives and building stronger communities across Africa.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .content-panel {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .content-panel.active {
+            display: block;
+            opacity: 1;
+        }
+        .toggle-btn-3d.active {
+            background: linear-gradient(135deg, #d4af37, #b8941f);
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-3d">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:asuwaju.aohf@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            asuwaju.aohf@gmail.com
+                        </a>
+                        <a href="tel:+2348166931129" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            +234 816 693 1129
+                        </a>
+                    </div>
+                    <div class="header-actions">
+                        <a href="volunteer.html" class="btn-volunteer">
+                            <i class="fas fa-hands-helping"></i>
+                            Become a Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar-3d">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-3d">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="logo-img">
+                            <span class="logo-text">AOHF</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="nav-menu">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="who-we-are.html">Who We Are</a>
+                                    <a href="our-journey.html">Our Journey</a>
+                                    <a href="mission-vision.html" class="active">Mission & Vision</a>
+                                    <a href="core-values.html">Core Values</a>
+                                    <a href="our-team.html">Our Team</a>
+                                    <a href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="food-distribution.html">Food Distribution</a>
+                                    <a href="clean-water.html">Clean Water Projects</a>
+                                    <a href="orphan-support.html">Orphan & Widow Support</a>
+                                    <a href="emergency-relief.html">Emergency Relief</a>
+                                    <a href="education.html">Education Programs</a>
+                                    <a href="healthcare.html">Healthcare Initiatives</a>
+                                    <a href="ramadan-qurbani-campaigns.html">Ramadan & Qurbani Campaigns</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Get Involved <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="support.html">Support Our Work</a>
+                                    <a href="ways-to-donate.html">Ways to Donate</a>
+                                    <a href="volunteer.html">Volunteer With AOHF</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link">Impact <i class="fas fa-chevron-down"></i></a>
+                                <div class="dropdown-menu-3d">
+                                    <a href="success-stories.html">Success Stories</a>
+                                    <a href="beneficiary-testimonials.html">Beneficiary Testimonials</a>
+                                    <a href="reports-transparency.html">Reports & Transparency</a>
+                                    <a href="gallery.html">Gallery</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                        <a href="donate.html" class="btn-donate-3d">
+                            <i class="fas fa-heart"></i>
+                            Donate Now
+                        </a>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section program-hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+            <div class="hero-waves"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="#" class="active">Mission & Vision</a>
+                </div>
+                <h1 class="hero-title">Mission & Vision</h1>
+                <p class="hero-description">
+                    Our mission drives every action we take, and our vision guides us toward a future 
+                    where every person in Africa has access to basic human needs and opportunities for growth.
+                </p>
+                <div class="hero-scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span>Scroll to explore</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Foundation - Enhanced 3D Section -->
+    <section class="foundation-section-3d">
+        <div class="foundation-background-3d">
+            <div class="foundation-gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="foundation-header-3d text-center" data-aos="zoom-in">
+                <div class="foundation-icon-3d" data-aos="flip-down" data-aos-delay="100">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h2 class="foundation-title-3d" data-aos="fade-up" data-aos-delay="200">Our Foundation</h2>
+                <p class="foundation-description-3d" data-aos="fade-up" data-aos-delay="300">The pillars that define our humanitarian mission</p>
+            </div>
+            <div class="foundation-pillars-3d">
+                <div class="pillar-card-3d floating" data-aos="flip-left" data-aos-delay="100" data-mouse-speed="15">
+                    <div class="pillar-card-inner">
+                        <div class="pillar-card-front">
+                            <div class="pillar-icon-3d">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="pillar-number-3d">01</div>
+                            <h4 class="pillar-title-3d">Clear Mission</h4>
+                            <p class="pillar-description-3d">Focused purpose driving every action</p>
+                        </div>
+                        <div class="pillar-card-back">
+                            <div class="pillar-details-3d">
+                                <h5>Our Purpose</h5>
+                                <p>Every action we take is guided by our clear, unwavering mission to transform lives across Africa through compassionate humanitarian work.</p>
+                                <div class="pillar-stats-3d">
+                                    <span class="stat-highlight">100%</span>
+                                    <span class="stat-label">Mission Focused</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card-3d floating" data-aos="flip-right" data-aos-delay="200" data-mouse-speed="20">
+                    <div class="pillar-card-inner">
+                        <div class="pillar-card-front">
+                            <div class="pillar-icon-3d">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="pillar-number-3d">02</div>
+                            <h4 class="pillar-title-3d">Unified Vision</h4>
+                            <p class="pillar-description-3d">Shared dream of transformed Africa</p>
+                        </div>
+                        <div class="pillar-card-back">
+                            <div class="pillar-details-3d">
+                                <h5>Our Dream</h5>
+                                <p>A unified vision that sees every person in Africa thriving with access to basic needs and opportunities for growth.</p>
+                                <div class="pillar-stats-3d">
+                                    <span class="stat-highlight">54</span>
+                                    <span class="stat-label">African Countries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card-3d floating" data-aos="flip-left" data-aos-delay="300" data-mouse-speed="18">
+                    <div class="pillar-card-inner">
+                        <div class="pillar-card-front">
+                            <div class="pillar-icon-3d">
+                                <i class="fas fa-compass"></i>
+                            </div>
+                            <div class="pillar-number-3d">03</div>
+                            <h4 class="pillar-title-3d">Core Values</h4>
+                            <p class="pillar-description-3d">Guiding principles in all we do</p>
+                        </div>
+                        <div class="pillar-card-back">
+                            <div class="pillar-details-3d">
+                                <h5>Our Compass</h5>
+                                <p>Five core values that guide every decision: Compassion, Integrity, Excellence, Sustainability, and Partnership.</p>
+                                <div class="pillar-stats-3d">
+                                    <span class="stat-highlight">5</span>
+                                    <span class="stat-label">Core Values</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card-3d floating" data-aos="flip-right" data-aos-delay="400" data-mouse-speed="22">
+                    <div class="pillar-card-inner">
+                        <div class="pillar-card-front">
+                            <div class="pillar-icon-3d pulse">
+                                <i class="fas fa-globe-africa"></i>
+                            </div>
+                            <div class="pillar-number-3d">∞</div>
+                            <h4 class="pillar-title-3d">Endless Impact</h4>
+                            <p class="pillar-description-3d">Limitless potential for change</p>
+                        </div>
+                        <div class="pillar-card-back">
+                            <div class="pillar-details-3d">
+                                <h5>Our Reach</h5>
+                                <p>Our impact knows no bounds. Every life touched creates ripples of positive change that extend far beyond our immediate reach.</p>
+                                <div class="pillar-stats-3d">
+                                    <span class="stat-highlight">∞</span>
+                                    <span class="stat-label">Endless Possibilities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Mission Vision Section -->
+    <section class="mission-vision-interactive" style="padding: 100px 0; background: #ffffff; position: relative; z-index: 10;">
+        <div class="container">
+            <div class="mission-vision-toggle-3d" data-aos="zoom-in">
+                <div class="toggle-background-3d">
+                    <div class="toggle-slider-3d"></div>
+                </div>
+                <div class="toggle-buttons-3d">
+                    <button class="toggle-btn-3d active" data-target="mission">
+                        <div class="btn-background-3d"></div>
+                        <div class="btn-content-3d">
+                            <div class="btn-icon-3d">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <span class="btn-text-3d">Our Mission</span>
+                            <div class="btn-subtitle-3d">What We Do</div>
+                        </div>
+                    </button>
+                    <button class="toggle-btn-3d" data-target="vision">
+                        <div class="btn-background-3d"></div>
+                        <div class="btn-content-3d">
+                            <div class="btn-icon-3d">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span class="btn-text-3d">Our Vision</span>
+                            <div class="btn-subtitle-3d">Where We're Going</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mission-vision-content">
+                <!-- Mission Content -->
+                <div class="content-panel active" id="mission">
+                    <div class="panel-3d" data-aos="flip-left">
+                        <div class="panel-front">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h2>Our Mission</h2>
+                                <div class="content-subtitle">Transforming Lives Through Compassionate Action</div>
+                            </div>
+                            
+                            <div class="mission-statement-3d">
+                                <p>"To improve lives and strengthen communities across Africa through practical, sustainable humanitarian support that addresses immediate needs while building long-term resilience and self-sufficiency."</p>
+                            </div>
+
+                            <div class="mission-pillars-3d">
+                                <div class="pillar-3d" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="pillar-icon-3d">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <h4>Compassionate Service</h4>
+                                    <p>Serving with empathy, dignity, and respect</p>
+                                </div>
+                                
+                                <div class="pillar-3d" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="pillar-icon-3d">
+                                        <i class="fas fa-leaf"></i>
+                                    </div>
+                                    <h4>Sustainable Solutions</h4>
+                                    <p>Creating lasting environmental and social change</p>
+                                </div>
+                                
+                                <div class="pillar-3d" data-aos="zoom-in" data-aos-delay="300">
+                                    <div class="pillar-icon-3d">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4>Community Partnership</h4>
+                                    <p>Building local capacity and ownership</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Content -->
+                <div class="content-panel" id="vision">
+                    <div class="panel-3d" data-aos="flip-right">
+                        <div class="panel-front">
+                            <div class="content-header">
+                                <div class="content-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h2>Our Vision</h2>
+                                <div class="content-subtitle">A Thriving Africa Where Every Life Matters</div>
+                            </div>
+                            
+                            <div class="vision-statement-3d">
+                                <p>"A thriving Africa where every individual has access to basic necessities, quality education, healthcare, and opportunities to reach their full potential in dignified, sustainable communities."</p>
+                            </div>
+
+                            <div class="vision-goals-3d">
+                                <div class="goal-3d" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="goal-icon-3d">
+                                        <i class="fas fa-globe-africa"></i>
+                                    </div>
+                                    <h4>Continental Impact</h4>
+                                    <p>Reaching every corner of Africa with hope</p>
+                                </div>
+                                
+                                <div class="goal-3d" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="goal-icon-3d">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <h4>Generational Change</h4>
+                                    <p>Creating opportunities for future generations</p>
+                                </div>
+                                
+                                <div class="goal-3d" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="goal-icon-3d">
+                                        <i class="fas fa-hands-helping"></i>
+                                    </div>
+                                    <h4>Self-Sufficiency</h4>
+                                    <p>Empowering communities to thrive independently</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Compass Section -->
+    <section class="impact-compass-section-3d">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Impact Compass</h2>
+                <p class="section-description">Four directions guiding our humanitarian journey</p>
+            </div>
+            
+            <div class="compass-container" data-aos="zoom-in" data-aos-delay="200">
+                <div class="compass-center">
+                    <div class="center-logo">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="center-text">AOHF</div>
+                </div>
+                
+                <div class="compass-direction north" data-direction="Education">
+                    <div class="direction-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="direction-label">Education</div>
+                    <div class="direction-description">Empowering minds for a brighter future</div>
+                </div>
+                
+                <div class="compass-direction east" data-direction="Healthcare">
+                    <div class="direction-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="direction-label">Healthcare</div>
+                    <div class="direction-description">Healing bodies, restoring hope</div>
+                </div>
+                
+                <div class="compass-direction south" data-direction="Emergency Relief">
+                    <div class="direction-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="direction-label">Emergency Relief</div>
+                    <div class="direction-description">Rapid response when crisis strikes</div>
+                </div>
+                
+                <div class="compass-direction west" data-direction="Clean Water">
+                    <div class="direction-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="direction-label">Clean Water</div>
+                    <div class="direction-description">Life-giving water for all communities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Constellation Section -->
+    <section class="values-constellation-section">
+        <div class="container">
+            <div class="constellation-content" data-aos="fade-up">
+                <div class="constellation-text">
+                    <h2>Our Guiding Stars</h2>
+                    <p>Like stars in the night sky, our core values guide every decision and action we take in our mission to transform lives across Africa.</p>
+                    <div class="values-metrics">
+                        <div class="value-metric" data-aos="fade-right" data-aos-delay="100">
+                            <span class="metric-number">100%</span>
+                            <span class="metric-label">Transparency</span>
+                        </div>
+                        <div class="value-metric" data-aos="fade-right" data-aos-delay="200">
+                            <span class="metric-number">15+</span>
+                            <span class="metric-label">Years Trust</span>
+                        </div>
+                        <div class="value-metric" data-aos="fade-right" data-aos-delay="300">
+                            <span class="metric-number">50K+</span>
+                            <span class="metric-label">Lives Guided</span>
+                        </div>
+                    </div>
+                    <a href="core-values.html" class="btn-primary-3d">
+                        <span>Explore Our Values</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="constellation-visual">
+                    <div class="stars-container">
+                        <div class="star" style="--x: 20%; --y: 30%; --delay: 0s;">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="star" style="--x: 80%; --y: 20%; --delay: 0.5s;">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="star" style="--x: 70%; --y: 70%; --delay: 1s;">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="star" style="--x: 30%; --y: 80%; --delay: 1.5s;">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="star" style="--x: 50%; --y: 50%; --delay: 2s;">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        
+                        <!-- Connecting lines -->
+                        <svg class="constellation-lines">
+                            <line x1="20%" y1="30%" x2="80%" y2="20%" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+                            <line x1="80%" y1="20%" x2="70%" y2="70%" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+                            <line x1="70%" y1="70%" x2="30%" y2="80%" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+                            <line x1="30%" y1="80%" x2="50%" y2="50%" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+                            <line x1="50%" y1="50%" x2="20%" y2="30%" stroke="rgba(212, 175, 55, 0.3)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Journey Timeline -->
+    <section class="journey-timeline-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Journey Forward</h2>
+                <p class="section-description">Milestones on our path to transforming Africa</p>
+            </div>
+            
+            <div class="timeline-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h4>Foundation Established</h4>
+                        <p>Started with a vision to transform lives across Africa through compassionate humanitarian work.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h4>Community Partnerships</h4>
+                        <p>Expanded our reach through strategic partnerships with local communities and organizations.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h4>Continental Impact</h4>
+                        <p>Reached over 100,000 beneficiaries across multiple African countries with our programs.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-marker">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2030</div>
+                        <h4>Vision 2030</h4>
+                        <p>Our ambitious goal to transform 1 million lives and create sustainable communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thriving Africa Vision - Next Level 3D Section -->
+    <section class="thriving-africa-section-3d">
+        <div class="container">
+            <div class="thriving-content-3d">
+                <div class="thriving-header-3d" data-aos="zoom-in">
+                    <div class="vision-badge-3d" data-aos="flip-down" data-aos-delay="100">
+                        <div class="badge-icon-3d">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <span class="badge-text-3d">Our Vision</span>
+                    </div>
+                    <h2 class="thriving-title-3d" data-aos="fade-up" data-aos-delay="200">
+                        A Thriving <span class="highlight-3d">Africa</span> Where Everyone <span class="highlight-3d">Flourishes</span>
+                    </h2>
+                </div>
+                
+                <div class="vision-statement-3d" data-aos="fade-up" data-aos-delay="900">
+                    <div class="statement-container-3d">
+                        <div class="statement-quote-3d">"</div>
+                        <p class="statement-text-3d" style="color: white;">
+                            To see a thriving Africa where every person has access to clean water, nutritious food, 
+                            quality education, healthcare, and safe shelter - where communities are empowered to 
+                            build their own sustainable futures.
+                        </p>
+                        <div class="statement-quote-3d closing">"</div>
+                    </div>
+                </div>
+                
+                <div class="vision-goals-3d">
+                    <div class="goal-card-3d" data-aos="flip-left" data-aos-delay="100">
+                        <div class="goal-card-inner-3d">
+                            <div class="goal-card-front-3d">
+                                <div class="goal-number-3d">01</div>
+                                <div class="goal-icon-container-3d">
+                                    <i class="fas fa-universal-access"></i>
+                                </div>
+                                <h4 class="goal-title-3d">Universal Access</h4>
+                                <p class="goal-description-3d">Basic human needs for all</p>
+                            </div>
+                            <div class="goal-card-back-3d">
+                                <div class="goal-details-3d">
+                                    <h5>Our Promise</h5>
+                                    <p>Every person has access to basic human needs and services including clean water, food, healthcare, and education.</p>
+                                    <div class="goal-progress-3d">
+                                        <div class="progress-bar-3d">
+                                            <div class="progress-fill-3d" data-width="75%"></div>
+                                        </div>
+                                        <span class="progress-text-3d">75% Progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-card-3d" data-aos="flip-right" data-aos-delay="200">
+                        <div class="goal-card-inner-3d">
+                            <div class="goal-card-front-3d">
+                                <div class="goal-number-3d">02</div>
+                                <div class="goal-icon-container-3d">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h4 class="goal-title-3d">Community Empowerment</h4>
+                                <p class="goal-description-3d">Self-sufficient communities</p>
+                            </div>
+                            <div class="goal-card-back-3d">
+                                <div class="goal-details-3d">
+                                    <h5>Our Approach</h5>
+                                    <p>Communities are equipped with skills and resources for self-sufficiency and sustainable development.</p>
+                                    <div class="goal-progress-3d">
+                                        <div class="progress-bar-3d">
+                                            <div class="progress-fill-3d" data-width="60%"></div>
+                                        </div>
+                                        <span class="progress-text-3d">60% Progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="goal-card-3d" data-aos="flip-left" data-aos-delay="300">
+                        <div class="goal-card-inner-3d">
+                            <div class="goal-card-front-3d">
+                                <div class="goal-number-3d">03</div>
+                                <div class="goal-icon-container-3d">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4 class="goal-title-3d">Sustainable Development</h4>
+                                <p class="goal-description-3d">Future-focused growth</p>
+                            </div>
+                            <div class="goal-card-back-3d">
+                                <div class="goal-details-3d">
+                                    <h5>Our Commitment</h5>
+                                    <p>Development that meets present needs without compromising future generations' ability to thrive.</p>
+                                    <div class="goal-progress-3d">
+                                        <div class="progress-bar-3d">
+                                            <div class="progress-fill-3d" data-width="85%"></div>
+                                        </div>
+                                        <span class="progress-text-3d">85% Progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vision-impact-3d" data-aos="fade-up" data-aos-delay="400">
+                    <div class="impact-stats-3d">
+                        <div class="impact-stat-3d" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="stat-circle-3d">
+                                <svg class="stat-ring-3d" width="120" height="120">
+                                    <circle class="stat-ring-bg" cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                    <circle class="stat-ring-progress" cx="60" cy="60" r="50" stroke="#d4af37" stroke-width="8" fill="none" data-percentage="100"/>
+                                </svg>
+                                <div class="stat-content-inner-3d">
+                                    <span class="stat-number-large-3d">1M+</span>
+                                    <span class="stat-label-small-3d">Lives</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-stat-3d" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="stat-circle-3d">
+                                <svg class="stat-ring-3d" width="120" height="120">
+                                    <circle class="stat-ring-bg" cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                    <circle class="stat-ring-progress" cx="60" cy="60" r="50" stroke="#d4af37" stroke-width="8" fill="none" data-percentage="54"/>
+                                </svg>
+                                <div class="stat-content-inner-3d">
+                                    <span class="stat-number-large-3d">54</span>
+                                    <span class="stat-label-small-3d">Countries</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-stat-3d" data-aos="zoom-in" data-aos-delay="700">
+                            <div class="stat-circle-3d">
+                                <svg class="stat-ring-3d" width="120" height="120">
+                                    <circle class="stat-ring-bg" cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                    <circle class="stat-ring-progress" cx="60" cy="60" r="50" stroke="#d4af37" stroke-width="8" fill="none" data-percentage="2030"/>
+                                </svg>
+                                <div class="stat-content-inner-3d">
+                                    <span class="stat-number-large-3d">2030</span>
+                                    <span class="stat-label-small-3d">Target</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Objectives -->
+    <section class="objectives-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Strategic Objectives</h2>
+                <p class="section-description">Key focus areas that guide our work toward achieving our mission and vision</p>
+            </div>
+            
+            <div class="objectives-grid-3d">
+                <div class="objective-card-3d" data-aos="flip-left" data-aos-delay="100">
+                    <div class="objective-card-inner">
+                        <div class="objective-card-front">
+                            <div class="objective-icon-3d">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Water & Sanitation</h4>
+                            <div class="objective-number">500K</div>
+                            <p>People to serve by 2030</p>
+                        </div>
+                        <div class="objective-card-back">
+                            <div class="objective-details">
+                                <h5>Our Water Mission</h5>
+                                <p>Provide sustainable access to clean water and sanitation facilities for 500,000 people by 2030</p>
+                                <div class="objective-progress-3d">
+                                    <div class="progress-circle" data-percentage="35">
+                                        <svg class="progress-ring" width="80" height="80">
+                                            <circle class="progress-ring-circle" stroke="#d4af37" stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/>
+                                        </svg>
+                                        <div class="progress-text">35%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objective-card-3d" data-aos="flip-right" data-aos-delay="200">
+                    <div class="objective-card-inner">
+                        <div class="objective-card-front">
+                            <div class="objective-icon-3d">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Education Access</h4>
+                            <div class="objective-number">50K</div>
+                            <p>Children & youth to educate</p>
+                        </div>
+                        <div class="objective-card-back">
+                            <div class="objective-details">
+                                <h5>Education for All</h5>
+                                <p>Ensure quality education for 50,000 children and youth through scholarships and learning centers</p>
+                                <div class="objective-progress-3d">
+                                    <div class="progress-circle" data-percentage="28">
+                                        <svg class="progress-ring" width="80" height="80">
+                                            <circle class="progress-ring-circle" stroke="#d4af37" stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/>
+                                        </svg>
+                                        <div class="progress-text">28%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objective-card-3d" data-aos="flip-left" data-aos-delay="300">
+                    <div class="objective-card-inner">
+                        <div class="objective-card-front">
+                            <div class="objective-icon-3d">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h4>Healthcare Services</h4>
+                            <div class="objective-number">1M</div>
+                            <p>People to serve</p>
+                        </div>
+                        <div class="objective-card-back">
+                            <div class="objective-details">
+                                <h5>Health for All</h5>
+                                <p>Deliver essential healthcare services to 1 million people in underserved communities</p>
+                                <div class="objective-progress-3d">
+                                    <div class="progress-circle" data-percentage="42">
+                                        <svg class="progress-ring" width="80" height="80">
+                                            <circle class="progress-ring-circle" stroke="#d4af37" stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/>
+                                        </svg>
+                                        <div class="progress-text">42%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="objective-card-3d" data-aos="flip-right" data-aos-delay="400">
+                    <div class="objective-card-inner">
+                        <div class="objective-card-front">
+                            <div class="objective-icon-3d">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Economic Empowerment</h4>
+                            <div class="objective-number">25K</div>
+                            <p>Families to empower</p>
+                        </div>
+                        <div class="objective-card-back">
+                            <div class="objective-details">
+                                <h5>Economic Growth</h5>
+                                <p>Support 25,000 families through livelihood programs and microfinance initiatives</p>
+                                <div class="objective-progress-3d">
+                                    <div class="progress-circle" data-percentage="18">
+                                        <svg class="progress-ring" width="80" height="80">
+                                            <circle class="progress-ring-circle" stroke="#d4af37" stroke-width="4" fill="transparent" r="36" cx="40" cy="40"/>
+                                        </svg>
+                                        <div class="progress-text">18%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section-3d section-padding">
+        <div class="cta-background-3d">
+            <div class="cta-particles"></div>
+            <div class="cta-waves"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content-3d text-center" data-aos="zoom-in">
+                <div class="cta-icon-3d" data-aos="flip-down" data-aos-delay="100">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h2 class="cta-title-3d" data-aos="fade-up" data-aos-delay="200">Help Us Achieve Our Vision</h2>
+                <p class="cta-description-3d" data-aos="fade-up" data-aos-delay="300">
+                    Join us in creating a future where every person in Africa has the opportunity to thrive and reach their full potential.
+                </p>
+                <div class="cta-stats-3d" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cta-stat-3d">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Lives to Impact</span>
+                    </div>
+                    <div class="cta-stat-3d">
+                        <span class="stat-number">2030</span>
+                        <span class="stat-label">Target Year</span>
+                    </div>
+                    <div class="cta-stat-3d">
+                        <span class="stat-number">54</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+                <div class="cta-actions-3d" data-aos="fade-up" data-aos-delay="500">
+                    <a href="donate.html" class="btn-primary-3d cta-btn-3d">
+                        <span>Support Our Mission</span>
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="volunteer.html" class="btn-secondary-3d cta-btn-3d">
+                        <span>Join Our Vision</span>
+                        <i class="fas fa-hands-helping"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action-btn" id="floating-action">
+        <div class="fab-main">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="fab-menu">
+            <a href="donate.html" class="fab-item" data-tooltip="Donate Now">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="volunteer.html" class="fab-item" data-tooltip="Volunteer">
+                <i class="fas fa-hands-helping"></i>
+            </a>
+            <a href="contact.html" class="fab-item" data-tooltip="Contact Us">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="#" class="fab-item" data-tooltip="Share" onclick="shareContent()">
+                <i class="fas fa-share-alt"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer-3d">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="pictures/logo.jpg" alt="AOHF Logo" class="footer-logo-img">
+                            <span class="footer-logo-text">AOHF</span>
+                        </div>
+                        <p class="footer-description">
+                            Asuwaju Odusote Humanitarian Foundation works to improve lives and strengthen 
+                            communities through practical, sustainable support across Africa and beyond.
+                        </p>
+                                            <div class="social-links">
+                        <a href="https://www.instagram.com/aohffoundation?igsh=MWxxcXRiZTY4dnQzZw%3D%3D&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@aohf.foundation?_t=ZS-90jUGmHbmYn&_r=1" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/3d-effects.js"></script>
+    <script src="assets/js/mission-vision-3d.js"></script>
+</body>
+</html>

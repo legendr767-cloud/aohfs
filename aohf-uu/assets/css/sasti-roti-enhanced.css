@@ -1,0 +1,577 @@
+/* Enhanced Sasti Roti Page Effects */
+
+/* Hero Section - Force White Text */
+.sasti-hero-3d .sasti-hero-title-3d,
+.sasti-hero-title-3d,
+.sasti-hero-title-3d .title-highlight-3d,
+.sasti-hero-title-3d .title-and-3d {
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+    font-size: 3.5rem !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+}
+
+.sasti-hero-3d .sasti-hero-description-3d,
+.sasti-hero-description-3d {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    font-size: 1.2rem !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.sasti-breadcrumb-3d a,
+.sasti-breadcrumb-3d span {
+    color: #FFFFFF !important;
+}
+
+.sasti-breadcrumb-3d span.active {
+    color: #FFFFFF !important;
+}
+
+.sasti-hero-title-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+    z-index: 1;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Hero Description Enhancement */
+.sasti-hero-description-3d {
+    position: relative;
+    overflow: hidden;
+}
+
+.sasti-hero-description-3d::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8B2B8B, transparent);
+    animation: underlineGlow 2s ease-in-out infinite;
+}
+
+@keyframes underlineGlow {
+    0%, 100% { opacity: 0.3; transform: scaleX(0.5); }
+    50% { opacity: 1; transform: scaleX(1); }
+}
+
+/* Feature Cards Enhancement */
+.sasti-feature-item-3d {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.sasti-feature-item-3d::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 43, 139, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.sasti-feature-item-3d:hover::before {
+    opacity: 1;
+    animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
+.sasti-feature-item-3d:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 43, 139, 0.2);
+}
+
+@keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+/* Stats Numbers - Simple Black Text */
+.sasti-stat-number-3d {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.sasti-stat-label-3d {
+    color: black !important;
+}
+
+.sasti-stat-description-3d {
+    color: black !important;
+}
+
+.sasti-stat-number-3d::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: numberShine 2s infinite;
+}
+
+@keyframes numberShine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Process Steps Enhancement */
+.sasti-step-item-3d {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sasti-step-item-3d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 43, 139, 0.05), rgba(255, 107, 53, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.sasti-step-item-3d:hover::before {
+    opacity: 1;
+}
+
+.sasti-step-number-3d {
+    position: relative;
+    background: linear-gradient(45deg, #8B2B8B, #FF6B35);
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(139, 43, 139, 0.3);
+    animation: numberPulse 2s ease-in-out infinite;
+}
+
+@keyframes numberPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 10px 20px rgba(139, 43, 139, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 15px 30px rgba(139, 43, 139, 0.4); }
+}
+
+/* CTA Section - White Text with White Outline */
+.sasti-cta-3d .sasti-cta-title-3d,
+.sasti-cta-title-3d {
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+    -webkit-text-stroke: 2px #FFFFFF !important;
+    text-stroke: 2px #FFFFFF !important;
+    text-shadow: 
+        0 0 0 #FFFFFF,
+        1px 1px 0 #FFFFFF,
+        -1px -1px 0 #FFFFFF,
+        1px -1px 0 #FFFFFF,
+        -1px 1px 0 #FFFFFF,
+        3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 25px !important;
+    text-align: center !important;
+    position: relative !important;
+    letter-spacing: 1px !important;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 
+            3px 3px 6px #000000,
+            0 0 20px rgba(255, 255, 255, 0.5),
+            0 0 40px rgba(212, 175, 55, 0.3);
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 
+            3px 3px 6px #000000,
+            0 0 30px rgba(255, 255, 255, 0.8),
+            0 0 60px rgba(212, 175, 55, 0.6);
+        transform: scale(1.02);
+    }
+}
+
+.sasti-cta-3d .sasti-cta-description-3d,
+.sasti-cta-description-3d {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+    font-size: 1.3rem !important;
+    text-shadow: 2px 2px 4px #000000 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.sasti-cta-title-3d::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, rgba(139, 43, 139, 0.1), rgba(255, 107, 53, 0.1));
+    z-index: -1;
+    border-radius: 10px;
+    animation: ctaGlow 3s ease-in-out infinite;
+}
+
+@keyframes ctaGlow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.02); }
+}
+
+/* Button Enhancements */
+.sasti-btn-3d, .sasti-cta-btn-3d {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sasti-btn-3d::before, .sasti-cta-btn-3d::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.sasti-btn-3d:hover::before, .sasti-cta-btn-3d:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.sasti-btn-3d:hover, .sasti-cta-btn-3d:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(139, 43, 139, 0.3);
+}
+
+/* Text Typing Effect */
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid #8B2B8B;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #8B2B8B; }
+}
+
+/* Floating Animation */
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .sasti-hero-title-3d {
+        font-size: 2rem;
+    }
+    
+    .sasti-stat-number-3d {
+        font-size: 2rem;
+    }
+    
+    .sasti-step-number-3d {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animation */
+.loading-dots {
+    display: inline-block;
+}
+
+.loading-dots::after {
+    content: '';
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+/* Page Loading Overlay */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8B2B8B, #FF6B35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.page-loader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+    color: white;
+}
+
+.loader-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Section Backgrounds */
+.sasti-program-overview-3d {
+    background: linear-gradient(135deg, rgba(139, 43, 139, 0.02), rgba(255, 107, 53, 0.02));
+    position: relative;
+    overflow: hidden;
+}
+
+.sasti-program-overview-3d::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 43, 139, 0.05) 0%, transparent 70%);
+    animation: backgroundPulse 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+    50% { transform: scale(1.1) rotate(180deg); opacity: 0.6; }
+}
+
+/* Text Shadow Enhancements */
+.sasti-section-title-3d,
+.sasti-works-title-3d,
+.sasti-stats-title-3d {
+    text-shadow: 0 4px 8px rgba(139, 43, 139, 0.2);
+    position: relative;
+}
+
+/* Icon Enhancements */
+.sasti-feature-icon-3d i,
+.sasti-stat-icon-3d i,
+.sasti-step-icon-3d i {
+    transition: all 0.3s ease;
+}
+
+.sasti-feature-item-3d:hover .sasti-feature-icon-3d i,
+.sasti-stat-card-3d:hover .sasti-stat-icon-3d i,
+.sasti-step-item-3d:hover .sasti-step-icon-3d i {
+    transform: scale(1.2) rotate(360deg);
+    color: #FF6B35;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #8B2B8B, #FF6B35);
+    z-index: 9998;
+    transition: width 0.3s ease;
+}
+
+/* Text Visibility Fixes */
+.sasti-hero-description-3d,
+.sasti-section-description-3d,
+.sasti-works-description-3d,
+.sasti-stats-description-3d,
+.sasti-cta-description-3d {
+    color: #4A5568 !important;
+}
+
+/* Program Impact - Simple Black Text */
+.sasti-stats-title-3d {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.sasti-stats-description-3d {
+    color: black !important;
+}
+
+.sasti-section-title-3d,
+.sasti-works-title-3d {
+    color: #1A1A1A !important;
+    font-weight: 800 !important;
+}
+
+.sasti-hero-badge-3d span,
+.sasti-section-badge-3d span,
+.sasti-works-badge-3d span,
+.sasti-stats-badge-3d span,
+.sasti-cta-badge-3d span {
+    color: #8B2B8B !important;
+}
+
+.sasti-breadcrumb-3d a,
+.sasti-breadcrumb-3d span,
+.sasti-breadcrumb-3d span.active {
+    color: #FFFFFF !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+.hero-stat-label-3d,
+.sasti-stat-label-3d {
+    color: #4A5568 !important;
+}
+
+.sasti-feature-content-3d h4,
+.sasti-step-content-3d h4 {
+    color: #1A1A1A !important;
+}
+
+.sasti-feature-content-3d p,
+.sasti-step-content-3d p,
+.sasti-stat-description-3d {
+    color: #4A5568 !important;
+}
+
+.step-feature-3d,
+.feature-stat-3d {
+    color: #8B2B8B !important;
+}
+
+.cta-stat-number-3d {
+    color: #FFFFFF !important;
+}
+
+.cta-stat-label-3d {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Lighter Backgrounds for Better Text Visibility */
+
+/* Hero Section - Original Background with Image and Purple Overlay */
+.sasti-hero-3d {
+    background: linear-gradient(rgba(139, 43, 139, 0.8), rgba(156, 39, 176, 0.7)), url('assets/images/sasti-roti-program.jpg') center/cover !important;
+    min-height: 100vh !important;
+}
+
+/* Stats Section - Lighter Background */
+.sasti-impact-stats-3d {
+    background: rgba(247, 250, 252, 0.95) !important;
+}
+
+/* CTA Section - Original Background */
+.sasti-cta-3d {
+    background: linear-gradient(135deg, rgba(139, 43, 139, 0.8), rgba(255, 107, 53, 0.8)) !important;
+}
+
+/* FORCE BREADCRUMB WHITE - OVERRIDE EVERYTHING */
+.sasti-breadcrumb-3d span.active,
+.sasti-hero-3d .sasti-breadcrumb-3d span.active,
+.sasti-hero-content-3d .sasti-breadcrumb-3d span.active {
+    color: #FFFFFF !important;
+    background: none !important;
+    text-shadow: 2px 2px 4px #000000 !important;
+    font-weight: bold !important;
+}
+
+/* Simple, Clean Styling */
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sasti-hero-title-3d {
+        font-size: 2.5rem !important;
+    }
+    
+    .sasti-stats-title-3d {
+        font-size: 2.2rem !important;
+    }
+    
+    .sasti-cta-title-3d {
+        font-size: 2.3rem !important;
+    }
+    
+    .typing-effect {
+        font-size: 1.5rem;
+    }
+    
+    .floating-element {
+        animation-duration: 4s;
+    }
+    
+    .sasti-feature-item-3d:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+}
