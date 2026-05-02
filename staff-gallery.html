@@ -3,81 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AOHF Blog | Latest Updates</title>
+    <title>Staff Gallery - Asuwaju Odusote Humanitarian Foundation</title>
+    <meta name="description" content="Meet the dedicated staff members of Asuwaju Odusote Humanitarian Foundation who work tirelessly to serve communities across Africa.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/3d-effects.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-    <style>
-        .blog-header {
-            text-align: center;
-            padding: 80px 20px 40px;
-            background: #f5f5f5;
-        }
-
-        .blog-header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .blog-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .blog-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 25px rgba(0,0,0,0.12);
-        }
-
-        .blog-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .blog-content {
-            padding: 20px;
-        }
-
-        .blog-content h3 {
-            margin: 0 0 10px;
-        }
-
-        .blog-content p {
-            color: #555;
-        }
-
-        .blog-content a.read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: #008000;
-            font-weight: bold;
-            text-decoration: none;
-        }
-    </style>
 </head>
-
 <body>
-
-     <!-- Header -->
+    <!-- Header -->
     <header class="header-3d">
         <div class="header-top">
             <div class="container">
@@ -115,7 +50,7 @@
                     <div class="nav-menu" id="nav-menu">
                         <ul class="nav-list">
                             <li class="nav-item">
-                                <a href="index.html" class="nav-link active">Home</a>
+                                <a href="index.html" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
@@ -125,6 +60,7 @@
                                     <a href="mission-vision.html">Mission & Vision</a>
                                     <a href="core-values.html">Core Values</a>
                                     <a href="our-team.html">Our Team</a>
+                                    <a href="staff-gallery.html">Staff Gallery</a>
                                     <a href="contact.html">Contact Us</a>
                                 </div>
                             </li>
@@ -132,7 +68,6 @@
                                 <a href="#" class="nav-link">What We Do <i class="fas fa-chevron-down"></i></a>
                                 <div class="dropdown-menu-3d">
                                     <a href="food-distribution.html">Food Distribution</a>
-                                   <!-- <a href="sasti-roti-junctions-fruit-cart.html">Sasti Roti Junctions & Fruit Cart</a>  -->
                                     <a href="clean-water.html">Clean Water Projects</a>
                                     <a href="orphan-support.html">Orphan & Widow Support</a>
                                     <a href="emergency-relief.html">Emergency Relief</a>
@@ -159,7 +94,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="blog.html" class="nav-link active">Blog</a>
+                                <a href="blog.html" class="nav-link">Blog</a>
                             </li>
                         </ul>
                         
@@ -188,92 +123,76 @@
         </nav>
     </header>
 
-
-    <section class="blog-header">
-        <h1>AOHF Blog</h1>
-        <p>News, updates, impact stories & humanitarian insights</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up">
+                <h1>Our Dedicated Staff</h1>
+                <p>Meet the passionate individuals who make our mission possible</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="our-team.html">About Us</a>
+                    <span>/</span>
+                    <span>Staff Gallery</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="blog-container">
-        <div class="blog-grid">
+    <!-- Staff Gallery Section -->
+    <section class="staff-gallery-section section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Staff Members</h2>
+                <p class="section-description">The dedicated team members who work behind the scenes to serve communities across Africa</p>
+            </div>
 
-            <!-- BLOG CARD 1 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture1.jpg" alt="Community clean water project">
-                <div class="blog-content">
-                    <h3>A Morning in Ijebu-Ode That Changed Everything</h3>
-                    <p>Discover how a single visit to a school in Ijebu-Ode reminded us why our mission is crucial for the community...</p>
-                    <a href="blog/post1.html" class="read-more">Read More →</a>
+            <div class="staff-gallery-grid">
+                <!-- Staff Member 1 -->
+                <div class="staff-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="staff-image">
+                        <img src="Staff-images/WhatsApp Image 2026-05-02 at 17.23.48 (1).jpeg" alt="AOHF Staff Member" loading="lazy">
+                        <div class="staff-overlay">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Member 2 -->
+                <div class="staff-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="staff-image">
+                        <img src="Staff-images/WhatsApp Image 2026-05-02 at 17.23.48.jpeg" alt="AOHF Staff Member" loading="lazy">
+                        <div class="staff-overlay">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff Member 3 -->
+                <div class="staff-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="staff-image">
+                        <img src="Staff-images/WhatsApp Image 2026-05-02 at 17.23.49.jpeg" alt="AOHF Staff Member" loading="lazy">
+                        <div class="staff-overlay">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- BLOG CARD 2 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture2.jpg" alt="Ijagun education support">
-                <div class="blog-content">
-                    <h3>Supporting Bright Students in Ijagun</h3>
-                    <p>How our programs are helping children in Ijagun access quality education and learning materials...</p>
-                    <a href="blog/post2.html" class="read-more">Read More →</a>
-                </div>
+            <!-- Call to Action -->
+            <div class="staff-cta" data-aos="fade-up" data-aos-delay="400">
+                <h3>Join Our Team</h3>
+                <p>We're always looking for passionate individuals to join our mission of transforming lives across Africa.</p>
+                <a href="volunteer.html" class="btn-primary">
+                    <span>Become a Volunteer</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-
-            <!-- BLOG CARD 3 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture3.jpg" alt="Health outreach initiative">
-                <div class="blog-content">
-                    <h3>Healthcare Outreach: Saving Lives in Rural Communities</h3>
-                    <p>Our health campaigns bring medical care and support to remote areas, transforming lives and communities...</p>
-                    <a href="blog/post3.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
-            <!-- BLOG CARD 4 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture4.jpg" alt="Emergency relief project">
-                <div class="blog-content">
-                    <h3>Rapid Response: Emergency Relief in Action</h3>
-                    <p>From floods to urgent humanitarian crises, see how our team provides timely and impactful support...</p>
-                    <a href="blog/post4.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
-            <!-- BLOG CARD 5 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture5.jpg" alt="Empowering widows and families">
-                <div class="blog-content">
-                    <h3>Empowering Widows & Vulnerable Families</h3>
-                    <p>Our initiatives aim to support widows and families in need, helping them regain stability and hope...</p>
-                    <a href="blog/post5.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
-            <!-- BLOG CARD 6 -->
-            <div class="blog-card">
-                <img src="blog/images/blog-picture6.jpg" alt="Educational scholarship impact">
-                <div class="blog-content">
-                    <h3>From Ilupeju to the Future: Scholarship Impact</h3>
-                    <p>Learn how one scholarship completely changed a girl's future and inspired hope for an entire community...</p>
-                    <a href="blog/post6.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
-            <!-- BLOG CARD 7 - FEATURED -->
-            <div class="blog-card" style="border: 3px solid #0b5a3d; position: relative;">
-                <div style="position: absolute; top: 10px; right: 10px; background: #0b5a3d; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; z-index: 10;">
-                    <i class="fas fa-star"></i> FEATURED
-                </div>
-                <img src="blog/images/mosque-pictures/mosque-pictures1.jpeg" alt="Mobalufun Central Mosque">
-                <div class="blog-content">
-                    <h3>Building Hope: Supporting Mobalufun Central Mosque 🕌</h3>
-                    <p>Supporting the completion of Mobalufun Central Mosque in Ijebu Ode - the only central mosque serving the entire district...</p>
-                    <a href="blog/post7.html" class="read-more">Read More →</a>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer-3d">
         <div class="footer-main">
             <div class="container">
@@ -294,10 +213,10 @@
                     <div class="footer-section">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
                             <li><a href="who-we-are.html">Who We Are</a></li>
                             <li><a href="our-journey.html">Our Journey</a></li>
                             <li><a href="mission-vision.html">Mission & Vision</a></li>
+                            <li><a href="our-team.html">Our Team</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -330,11 +249,20 @@
             <div class="container">
                 <div class="footer-bottom-content">
                     <p>&copy; 2024 Asuwaju Odusote Humanitarian Foundation. All rights reserved.</p>
-                                        <div class="social-links">
-                        <a href="https://www.instagram.com/aohf_foundation?igsh=MWx4NHF0ZnE3NDNsMw==" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://tiktok.com/@aohffoundation" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61587400866153" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aohf_foundation?igsh=MWx4NHF0ZnE3NDNsMw==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@aohffoundation" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://x.com/Aohf_foundation" class="social-link" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/3d-effects.js" defer></script>
 </body>
 </html>
