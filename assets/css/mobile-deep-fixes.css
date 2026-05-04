@@ -20,14 +20,60 @@
         max-width: 100% !important;
     }
     
-    /* Container fixes */
-    .container,
-    .container-fluid {
+    /* EXCEPTIONS: Mobile Menu Elements - Don't restrict these */
+    .mobile-menu-toggle,
+    #mobile-menu-toggle,
+    .nav-menu,
+    #nav-menu,
+    .burger-icon,
+    .burger-lines,
+    .burger-line {
+        max-width: none !important;
+    }
+    
+    /* Ensure mobile menu toggle is clickable */
+    .mobile-menu-toggle,
+    #mobile-menu-toggle {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        z-index: 10002 !important;
+        position: relative !important;
+    }
+    
+    /* Mobile Menu - Ensure it works properly */
+    .nav-menu,
+    #nav-menu {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 85% !important;
+        max-width: 350px !important;
+        height: 100vh !important;
+        background: white !important;
+        z-index: 10000 !important;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    .nav-menu.active,
+    #nav-menu.active {
+        right: 0 !important;
+    }
+    
+    /* Container fixes - but not for navbar */
+    .container:not(.navbar-content) {
         max-width: 100% !important;
         width: 100% !important;
         padding-left: 15px !important;
         padding-right: 15px !important;
         overflow-x: hidden !important;
+    }
+    
+    /* Navbar container should not be restricted */
+    .navbar-content {
+        max-width: 100% !important;
+        overflow: visible !important;
     }
     
     /* Row fixes */
