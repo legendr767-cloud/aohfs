@@ -10627,25 +10627,7 @@ body {
         order: 3;
     }
     
-    /* Mobile menu overlay */
-    .nav-menu::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: -1;
-    }
-    
-    .nav-menu.active::before {
-        opacity: 1;
-        visibility: visible;
-    }
+    /* Mobile menu overlay - REMOVED to prevent black flash */
     
     /* Hide desktop donate button on mobile, show in menu */
     .nav-actions .btn-donate-3d {
@@ -10730,25 +10712,7 @@ body {
         height: calc(100vh - 160px);
     }
     
-    /* Mobile menu overlay */
-    .nav-menu::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: -1;
-    }
-    
-    .nav-menu.active::before {
-        opacity: 1;
-        visibility: visible;
-    }
+    /* Mobile menu overlay - REMOVED to prevent black flash */
     
     .hero-slide-content {
         grid-template-columns: 1fr;

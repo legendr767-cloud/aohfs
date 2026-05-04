@@ -179,6 +179,34 @@ body {
         margin-top: 20px !important;
     }
     
+    /* Mobile menu overlay - using body::after to prevent black flash */
+    body.menu-open::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Ensure menu is above overlay */
+    .nav-menu,
+    #nav-menu {
+        z-index: 10000 !important;
+    }
+    
     /* Container fixes - but not for navbar */
     .container:not(.navbar-content) {
         max-width: 100% !important;

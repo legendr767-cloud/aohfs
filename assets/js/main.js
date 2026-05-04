@@ -417,9 +417,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside
+        // Close menu when clicking outside (including overlay)
         document.addEventListener('click', function(e) {
             if (navMenu && navMenu.classList.contains('active')) {
+                const isClickInsideMenu = navMenu.contains(e.target);
+                const isClickOnToggle = mobileMenuToggle && mobileMenuToggle.contains(e.target);
+                
+                if (!isClickInsideMenu && !isClickOnToggle) {
+                    closeMobileMenu();
+                }
+            }
+        });
+        
+        // Also close menu when clicking on the overlay specifically
+        document.body.addEventListener('click', function(e) {
+            if (document.body.classList.contains('menu-open')) {
                 const isClickInsideMenu = navMenu.contains(e.target);
                 const isClickOnToggle = mobileMenuToggle && mobileMenuToggle.contains(e.target);
                 
