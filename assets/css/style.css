@@ -11679,26 +11679,7 @@ font-size: 2rem;
         display: flex !important;
     }
 
-    .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-        padding: 20px 0;
-    }
-
-    .nav-menu.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
+    /* Mobile menu styles handled by mobile-deep-fixes.css */
 
     .nav-list {
         flex-direction: column;
