@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, { passive: true });
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle - Enhanced
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     
@@ -331,33 +331,39 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Nav menu:', navMenu);
     
     if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+        // Toggle menu function
+        function toggleMobileMenu() {
+            const isActive = navMenu.classList.contains('active');
+            
             navMenu.classList.toggle('active');
             mobileMenuToggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
             
-            // Animate hamburger menu
-            const spans = mobileMenuToggle.querySelectorAll('span');
-            if (mobileMenuToggle.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            // Prevent body scroll when menu is open
+            if (!isActive) {
+                document.body.style.overflow = 'hidden';
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                document.body.style.overflow = '';
             }
-        });
+        }
         
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
-                const spans = mobileMenuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+        // Close menu function
+        function closeMobileMenu() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+            
+            // Close all dropdowns
+            document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+        
+        // Hamburger menu click
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMobileMenu();
         });
         
         // Handle dropdown toggles in mobile
@@ -366,8 +372,8 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    e.stopPropagation();
                     const parentItem = this.parentElement;
-                    const dropdown = this.nextElementSibling;
                     
                     // Close other dropdowns
                     document.querySelectorAll('.nav-item.dropdown').forEach(item => {
@@ -382,23 +388,54 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close mobile menu when clicking on overlay
+        // Close menu when clicking on a regular nav link (non-dropdown)
+        const regularNavLinks = document.querySelectorAll('.nav-item:not(.dropdown) .nav-link');
+        regularNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // Close menu when clicking on dropdown items
+        const dropdownItems = document.querySelectorAll('.dropdown-menu-3d a');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (navMenu && navMenu.classList.contains('active')) {
                 const isClickInsideMenu = navMenu.contains(e.target);
                 const isClickOnToggle = mobileMenuToggle && mobileMenuToggle.contains(e.target);
                 
                 if (!isClickInsideMenu && !isClickOnToggle) {
-                    navMenu.classList.remove('active');
-                    mobileMenuToggle.classList.remove('active');
-                    
-                    // Reset hamburger animation
-                    const spans = mobileMenuToggle.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
+                    closeMobileMenu();
                 }
             }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+        
+        // Handle window resize
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            }, 250);
         });
     }
 

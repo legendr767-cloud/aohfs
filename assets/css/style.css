@@ -7429,7 +7429,7 @@ body {
 
 /* Mobile Menu Toggle Styles */
 .mobile-menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -7439,7 +7439,7 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 10000;
 }
 
 .mobile-menu-toggle span {
@@ -10500,20 +10500,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Mobile Menu */
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-dark);
-    transition: all 0.3s ease;
-}
+/* Mobile Menu - Styles handled in mobile-optimized.css */
 
 /* Mobile Responsiveness - Hero Section */
 @media screen and (max-width: 1024px) {
@@ -11721,7 +11708,9 @@ font-size: 2rem;
 
     /* Navigation Mobile */
     .nav-actions {
-        display: none;
+        display: flex !important;
+        align-items: center;
+        gap: 10px;
     }
 
     .mobile-menu-toggle {

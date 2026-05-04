@@ -7,6 +7,8 @@
     <meta name="description" content="Meet the dedicated team behind AOHF's humanitarian work across Africa - passionate professionals committed to transforming lives.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/3d-effects.css">
+    <link rel="stylesheet" href="assets/css/mobile-optimized.css">
+    <link rel="stylesheet" href="assets/css/mobile-deep-fixes.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -85,6 +87,40 @@
         
         .accountant-general:hover img {
             transform: scale(1.25);
+        }
+    </style>
+    <!-- Critical Mobile Menu Styles -->
+    <style>
+        /* CRITICAL: No overlay, clean mobile menu */
+        body {
+            position: static !important;
+            overflow: auto !important;
+        }
+        
+        body::after {
+            content: none !important;
+            display: none !important;
+            pointer-events: none !important;
+        }
+        
+        /* CRITICAL: Mobile Menu Toggle Visibility */
+        .mobile-menu-toggle,
+        button.mobile-menu-toggle,
+        #mobile-menu-toggle {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            z-index: 10002 !important;
+            position: relative !important;
+        }
+        
+        /* Hide on Desktop Only */
+        @media screen and (min-width: 769px) {
+            .mobile-menu-toggle,
+            button.mobile-menu-toggle,
+            #mobile-menu-toggle {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -173,6 +209,14 @@
                                 <a href="blog.html" class="nav-link">Blog</a>
                             </li>
                         </ul>
+                                            
+                        <!-- Mobile Donate Button -->
+                        <div class="mobile-donate-section">
+                            <a href="donate.html" class="mobile-donate-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>Donate Now</span>
+                            </a>
+                        </div>
                     </div>
                     
                     <div class="nav-actions">
@@ -180,10 +224,14 @@
                             <i class="fas fa-heart"></i>
                             Donate Now
                         </a>
-                        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                            <svg class="burger-icon" width="32" height="32" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                                <g class="burger-lines">
+                                    <rect class="burger-line burger-line-top" height="1" width="11" x="0.5" y="2.5"/>
+                                    <rect class="burger-line burger-line-middle" height="1" width="11" x="0.5" y="5.5"/>
+                                    <rect class="burger-line burger-line-bottom" height="1" width="11" x="0.5" y="8.5"/>
+                                </g>
+                            </svg>
                         </button>
                     </div>
                 </div>
