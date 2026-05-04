@@ -114,7 +114,7 @@ body {
         z-index: 10001 !important;
     }
     
-    /* Mobile Menu - Ensure it works properly */
+    /* Mobile Menu - WORKING VERSION FROM TEST PAGE */
     .nav-menu,
     #nav-menu {
         position: fixed !important;
@@ -125,16 +125,24 @@ body {
         height: 100vh !important;
         background: white !important;
         z-index: 10000 !important;
-        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        transition: right 0.4s ease !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        padding: 80px 0 20px 0 !important;
+        padding: 80px 20px 20px 20px !important;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15) !important;
     }
     
     .nav-menu.active,
     #nav-menu.active {
         right: 0 !important;
+    }
+    
+    /* Ensure links are clickable */
+    .nav-menu a,
+    .nav-menu .nav-link,
+    .nav-menu .dropdown-menu-3d a {
+        pointer-events: auto !important;
+        cursor: pointer !important;
     }
     
     /* Mobile menu list */
@@ -164,6 +172,47 @@ body {
         text-decoration: none !important;
         transition: all 0.3s ease !important;
         min-height: 56px !important;
+    }
+    
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background: rgba(139, 43, 139, 0.08) !important;
+        color: #8B2B8B !important;
+    }
+    
+    /* Dropdown menus in mobile */
+    .nav-menu .dropdown-menu-3d {
+        position: static !important;
+        background: rgba(139, 43, 139, 0.05) !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: none !important;
+    }
+    
+    .nav-menu .nav-item.dropdown.active .dropdown-menu-3d {
+        display: block !important;
+    }
+    
+    .nav-menu .dropdown-menu-3d a {
+        display: block !important;
+        padding: 15px 45px !important;
+        color: var(--text-dark) !important;
+        opacity: 0.8 !important;
+        font-size: 14px !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        border-bottom: 1px solid rgba(139, 43, 139, 0.05) !important;
+    }
+    
+    .nav-menu .dropdown-menu-3d a:hover {
+        opacity: 1 !important;
+        background: rgba(139, 43, 139, 0.08) !important;
+        color: #8B2B8B !important;
     }
     
     /* Hide desktop donate button on mobile */

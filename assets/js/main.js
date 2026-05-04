@@ -372,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hamburger menu click
         mobileMenuToggle.addEventListener('click', function(e) {
             e.stopPropagation();
+            console.log('Hamburger clicked!');
             toggleMobileMenu();
         });
         
