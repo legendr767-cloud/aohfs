@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Header Scroll Effect - Mobile optimized
+    // Header Scroll Effect - Keep header always visible and fixed at top
     const header = document.querySelector('.header-3d');
     let lastScrollTop = 0;
     let headerTicking = false;
@@ -289,26 +289,24 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHeader() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 50) {
-            header.classList.add('scrolled');
-            if (!isMobile) {
+        // Always keep header visible and fixed at top
+        if (header) {
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            header.style.left = '0';
+            header.style.right = '0';
+            header.style.width = '100%';
+            header.style.zIndex = '9999';
+            header.style.transform = 'translateY(0)';
+            
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            }
-        } else {
-            header.classList.remove('scrolled');
-            if (!isMobile) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        }
-
-        // Hide/show header on scroll (disabled on mobile for better UX)
-        if (!isMobile) {
-            if (scrollTop > lastScrollTop && scrollTop > 200) {
-                header.style.transform = 'translateY(-100%)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
             } else {
-                header.style.transform = 'translateY(0)';
+                header.classList.remove('scrolled');
+                header.style.background = 'white';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
             }
         }
         
@@ -322,6 +320,17 @@ document.addEventListener('DOMContentLoaded', function() {
             headerTicking = true;
         }
     }, { passive: true });
+    
+    // Initialize header on page load
+    if (header) {
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.width = '100%';
+        header.style.zIndex = '9999';
+        header.style.transform = 'translateY(0)';
+    }
 
     // Mobile Menu Toggle - Enhanced
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');

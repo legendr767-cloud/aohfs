@@ -1,5 +1,12 @@
 /* MOBILE-FIRST RESPONSIVE CSS - COMPLETE REBUILD */
 
+/* CRITICAL: Fixed Header */
+.header-3d {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+}
+
 /* CRITICAL: Prevent horizontal scroll on ALL elements */
 * {
     max-width: 100%;
@@ -93,10 +100,10 @@ button.mobile-menu-toggle,
         line-height: 1.5 !important;
     }
     
-    /* Hero Section */
+    /* Hero Section - Account for fixed header */
     .hero-carousel-section {
         min-height: 100vh;
-        padding-top: 70px;
+        padding-top: 140px !important;
     }
     
     .hero-main-title {
